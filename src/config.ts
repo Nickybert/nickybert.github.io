@@ -7,7 +7,7 @@
 // Place your image in the public/images folder and update the path
 export const HERO_IMAGE = "./images/hero_portrait_new.png";
 
-// ABOUT SECTION IMAGE (Africa graphic is SVG, no config needed)
+// ABOUT SECTION IMAGE (Updated image)
 export const AFRICA_IMAGE = "./images/africa.png";
 
 // QUOTE SECTION IMAGE
