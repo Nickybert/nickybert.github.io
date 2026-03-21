@@ -27,12 +27,12 @@ const About = () => (
             , by the Economic and Social Research Council (ESRC) / UK Research and Innovation (UKRI).
           </p>
           <p>
-            His doctoral research uses mixed methods to explore the formation and mobilisation of
+            His doctoral research uses mixed methods (advanced computational social network analysis with qualitative interviews) to explore the formation and mobilisation of
             collective political identities in hashtag-driven protest movements in sub-Saharan Africa.
           </p>
           <p>
             He has research interests in digital politics, contention, comparative politics,
-            African studies, and the politics of migration governance.
+            African studies, African philosophy and the politics of migration governance.
           </p>
         </div>
 
