@@ -12,21 +12,21 @@ const data = {
     },
     {
       citation: 'Anakwue, N. (November 10, 2022). "Don\'t sleep, wake up: Monetising the creator\'s power in Africa". The Cable Nigeria News.',
-      link: 'https://www.thecable.ng/',
+      link: 'https://www.thecable.ng/dont-sleep-wake-up-monetising-the-creators-power-in-africa/',
       year: '2022',
     },
     {
-      citation: 'Anakwue, N. (October 24, 2018). "Africapitalism in Nigeria and the mirage of discarding leadership excellence from national development discourse", The Nigerian Tribune Newspapers, Nigeria.',
-      link: '#',
+      citation: 'Anakwue, N. (October 24, 2018). "Africapitalism in Nigeria and the mirage of discarding leadership excellence from national development discourse". The Nigerian Tribune Newspapers, Nigeria.',
+      link: 'https://tribuneonlineng.com/africapitalism-in-nigeria-and-the-discarding-leadership-excellence-from-national-development-discourse/',
       year: '2018',
     },
     {
-      citation: 'Anakwue, N. (December 8, 2015). "On the threshold: Building a new Nigeria", The Guardian Newspapers, Nigeria.',
-      link: '#',
+      citation: 'Anakwue, N. (December 8, 2015). "On the threshold: Building a new Nigeria". The Guardian Newspapers, Nigeria.',
+      link: 'https://allafrica.com/stories/201512081367.html',
       year: '2015',
     },
     {
-      citation: 'Anakwue, N. (July 25, 2013). "How to tackle corruption in Nigeria and the role of youths in its eradication", The Guardian Newspapers, Nigeria.',
+      citation: 'Anakwue, N. (July 25, 2013). "How to tackle corruption in Nigeria and the role of youths in its eradication". The Guardian Newspapers, Nigeria.',
       link: '#',
       year: '2013',
     },

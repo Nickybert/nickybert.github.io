@@ -1,4 +1,4 @@
-import { Linkedin, Twitter, Github, GraduationCap, Mail } from 'lucide-react';
+import { Linkedin, Twitter, Github, GraduationCap } from 'lucide-react';
 import { HERO_IMAGE, PERSONAL_INFO, SOCIAL_LINKS } from '../config';
 
 const socialLinks = [
@@ -6,7 +6,6 @@ const socialLinks = [
   { icon: Twitter,      href: SOCIAL_LINKS.twitter,  label: 'X (Twitter)' },
   { icon: Github,       href: SOCIAL_LINKS.github,   label: 'GitHub' },
   { icon: GraduationCap, href: SOCIAL_LINKS.orcid,  label: 'ORCID' },
-  { icon: Mail,          href: `mailto:${PERSONAL_INFO.email}`, label: 'Email' },
 ];
 
 const Hero = () => (
