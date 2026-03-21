@@ -63,6 +63,13 @@ const Research = () => (
                 <br />Queen Mary University of London
               </span>
             </li>
+<li className="flex items-start gap-2.5 text-[14px] text-[#0B0D10]/75 leading-relaxed">
+              <span className="mt-[5px] w-1.5 h-1.5 rounded-full bg-[#C8332E]/50 shrink-0" />
+              <span>
+                <span className="font-medium text-[#0B0D10]">POL109 – Global Histories</span>
+                <br />Queen Mary University of London
+              </span>
+            </li>
           </ul>
         </div>
 
