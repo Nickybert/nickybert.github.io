@@ -8,6 +8,7 @@
 export const HERO_IMAGE = "./images/hero_portrait_new.png";
 
 // ABOUT SECTION IMAGE (Africa graphic is SVG, no config needed)
+export const AFRICA_IMAGE = "./images/africa.png";
 
 // QUOTE SECTION IMAGE
 export const RAWLS_IMAGE = "./images/rawls_portrait_new.jpg";
