@@ -45,15 +45,7 @@ const About = () => (
           ))}
         </div>
 
-        {/* CTA line */}
-        <div className="animate-on-scroll delay-3 mt-6 pt-5 border-t border-[#0B0D10]/8">
-          <p className="text-xs text-[#C8332E] font-medium font-mono tracking-wide uppercase mb-1">
-            Open to collaborations
-          </p>
-          <a href="mailto:n.c.anakwue@qmul.ac.uk" className="text-sm text-[#0B0D10] text-link font-medium">
-            n.c.anakwue@qmul.ac.uk
-          </a>
-        </div>
+        
       </div>
 
     </div>
