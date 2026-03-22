@@ -66,7 +66,7 @@ const Contact = () => (
       {/* Footer */}
       <div className="animate-on-scroll delay-2 mt-16 pt-6 border-t border-[#F4F6F8]/08 flex flex-col sm:flex-row items-center justify-between gap-3">
         <p className="font-mono text-[0.58rem] tracking-[0.1em] uppercase text-[#F4F6F8]/25">
-          © {new Date().getFullYear()} {PERSONAL_INFO.name}
+          © {new Date().getFullYear()} {PERSONAL_INFO.name}. ALL RIGHTS RESERVED.
         </p>
         <p className="font-mono text-[0.58rem] tracking-[0.1em] uppercase text-[#F4F6F8]/20">
           {PERSONAL_INFO.institution}
