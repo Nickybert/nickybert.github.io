@@ -1,4 +1,4 @@
-// ── Africa SVG with animated research-node dots ──────────────
+// ── Africa image ──────────────
 
 import { AFRICA_IMAGE } from '../config';
 
@@ -29,6 +29,15 @@ const About = () => (
           <p>
             His doctoral research uses mixed methods (advanced computational social network analysis with qualitative interviews) to explore the formation and mobilisation of
             collective political identities in hashtag-driven protest movements in sub-Saharan Africa.
+          </p>
+          <p>
+            Beyond academia, Nicholas is a product innovation expert with extensive cognate experience in
+            digital marketing, UX research, and strategic growth for tech companies. His work
+            earned him the 2022 DreamVC LIVC Fellowship, where he developed expertise in
+            startup due diligence and venture capital investing. He has also worked as a Venture Partner at
+            Republic, specialising in edtech and e-commerce in identifying high-growth
+            startups across a broad investor network, and has offered coaching for edtech
+            startups under Injini's accelerator programme.
           </p>
           <p>
             He has research interests in digital politics, contention, comparative politics,
