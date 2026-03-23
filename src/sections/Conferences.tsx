@@ -2,7 +2,7 @@ import { MapPin } from 'lucide-react';
 
 const conferences = [
   {
-    citation: 'Panel Convenor, "Digital Citizenship, Political Belonging and Statehood in Contemporary Africa", SGAS–VAD 2026, University of Basel, Switzerland.',
+    citation: 'Anakwue, N. (August 26-28, 2026). Panel Convenor, "Digital Citizenship, Political Belonging and Statehood in Contemporary Africa", Forthcoming SGAS–VAD Conference 2026, University of Basel, Switzerland.',
     year: '2026',
     location: 'Basel, Switzerland',
   },
@@ -22,12 +22,12 @@ const conferences = [
     location: 'Manchester, UK',
   },
   {
-    citation: 'Anakwue, N. (July 8, 2024). "Re-imagining political identity: EndSARS and its impact on Tilly\'s WUNC framework", Digital Politics and Social Movements Workshop, University of York, UK.',
+    citation: 'Anakwue, N. (July, 2024). "Re-imagining political identity: EndSARS and its impact on Tilly\'s WUNC framework", Digital Politics and Social Movements Workshop, University of York, UK.',
     year: '2024',
     location: 'York, UK',
   },
   {
-    citation: 'Anakwue, N. (September 7, 2020). "Re-centering Africa in the study of ancient philosophy: The legacy of ancient Egyptian philosophy", Critical Ancient World Studies Workshop, University of Oxford, UK.',
+    citation: 'Anakwue, N. (September, 2020). "Re-centering Africa in the study of ancient philosophy: The legacy of ancient Egyptian philosophy", Critical Ancient World Studies Workshop, University of Oxford, UK.',
     year: '2020',
     location: 'Oxford, UK',
   },
