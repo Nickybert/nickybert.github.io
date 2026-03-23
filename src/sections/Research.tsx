@@ -38,11 +38,11 @@ const Research = () => (
           <ul className="space-y-3">
             <li className="flex items-start gap-2.5 text-[14px] text-[#0B0D10]/75 leading-relaxed">
               <span className="mt-[5px] w-1.5 h-1.5 rounded-full bg-[#C8332E]/50 shrink-0" />
-              DyNAM modelling of Twitter conversation networks across #EndSARS and #ThisFlag protest movements.
+              Comparative DyNAM and ERGM modelling of Twitter interaction networks across #EndSARS and #ThisFlag protest movements.
             </li>
             <li className="flex items-start gap-2.5 text-[14px] text-[#0B0D10]/75 leading-relaxed">
               <span className="mt-[5px] w-1.5 h-1.5 rounded-full bg-[#C8332E]/50 shrink-0" />
-              Comparative ERGM analysis of community homophily and preferential attachment in hashtag-driven protest networks.
+              Thematic analysis of qualitative interview data from protest actors from the core and periphery of #EndSARS and #ThisFlag protest movements.
             </li>
           </ul>
         </div>
