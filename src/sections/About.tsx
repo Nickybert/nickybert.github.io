@@ -45,8 +45,8 @@ const About = () => (
             I’m a DreamVC LIVC Fellow, a former Venture Partner at Republic, 
             a Pitch Champion at the London Venture Crawl, 
             and the winner of Queen Mary's 3-Minute Thesis competition at both faculty and university levels.
-I am also published in peer-reviewed journals and edited volumes from Routledge and Palgrave Macmillan, 
-            and have presented my research at the LSE, Oxford, Manchester, and the African Studies Association's Annual Meeting, 
+I am also published in top peer-reviewed journals and edited volumes from Routledge and Palgrave Macmillan, and have papers under review at <em>Contention</em>.
+            I have also presented my research at conferences and seminars the LSE, QMUL, Oxford, Manchester, and the African Studies Association's Annual Meeting, 
             and peer-reviewed for five top-tier academic journals. 
           </p>
         </div>
