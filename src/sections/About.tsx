@@ -37,23 +37,23 @@ const About = () => (
             My methods rigorously utilise Exponential Random Graph Models, Dynamic Network Actor Models, 
             in-depth qualitative interviews across five actor strata, and original fieldwork insights conducted in Lagos, Nigeria. 
             My theoretical contribution extends connective action theory through the lens of network architecture to a logic of collection, 
-            showing how the structural shape of digital conversation either concentrates or distributes political agency.
+            showing how the structural shapes of digital conversation either concentrate or distribute political agency in social movements.
           </p>
           <p>
             Before the academy, I spent years building things: growth strategies for African tech startups in civictech, media and e-commerce, 
-            and constructing investment memos for seed-stage ventures. 
+            and writing investment memos for seed-stage ventures. 
             I’m a DreamVC LIVC Fellow, a former Venture Partner at Republic, 
             a Pitch Champion at the London Venture Crawl, 
             and the winner of Queen Mary's 3-Minute Thesis competition at both faculty and university levels.
 I am also published in top peer-reviewed journals and edited volumes from Routledge and Palgrave Macmillan, and have papers under review at <em>Contention</em>.
-            I have also presented my research at conferences and seminars the LSE, QMUL, Oxford, Manchester, and the African Studies Association's Annual Meeting, 
+            I have also presented my research at and convened panels in digital politics at conferences and seminars at the LSE, QMUL, University of Basel, Oxford, AFPP Manchester, and the African Studies Association's Annual Meeting in the US, 
             and peer-reviewed for five top-tier academic journals. 
           </p>
         </div>
 
         {/* Keywords */}
         <div className="animate-on-scroll delay-2 mt-6 flex flex-wrap gap-2">
-          {['#EndSARS', '#ThisFlag', 'Network Analysis', 'Connective Action', 'ERGM', 'Twitter'].map((tag) => (
+          {['#EndSARS', '#ThisFlag', 'Network Analysis', 'Connective Action', 'ERGM', 'Twitter', 'DyNAM'].map((tag) => (
             <span key={tag} className="font-mono text-[0.6rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-full border border-[#0B0D10]/12 text-[#0B0D10]/60 bg-white">
               {tag}
             </span>
