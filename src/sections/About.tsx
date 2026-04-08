@@ -20,28 +20,34 @@ const About = () => (
 
         <div className="space-y-4 text-[15px] lg:text-[15.5px] leading-[1.75] text-[#0B0D10]/80">
           <p>
-            Nicholas Anakwue is a recipient of the{' '}
+            I am a recipient of the{' '}
             <a href="https://liss-dtp.ac.uk/students/nicholas-anakwue/" target="_blank" rel="noopener noreferrer" className="text-link font-medium">
               2023 LISS DTP Studentship and International Doctoral Scholar Award
             </a>
             , by the Economic and Social Research Council (ESRC) / UK Research and Innovation (UKRI).
           </p>
           <p>
-            His doctoral research uses mixed methods (advanced computational social network analysis with qualitative interviews) to explore the formation and mobilisation of
-            collective political identities in hashtag-driven protest movements in sub-Saharan Africa.
+            My research sits at the intersection of computational social science, African digital politics, 
+            and technology governance — a convergence that makes me equally credible in academic research and product strategy rooms.
           </p>
           <p>
-            Beyond academia, Nicholas is a product innovation expert with extensive cognate experience in
-            digital marketing, UX research, and strategic growth for tech companies. His work
-            earned him the 2022 DreamVC LIVC Fellowship, where he developed expertise in
-            startup due diligence and venture capital investing. He has also worked as a Venture Partner at
-            Republic, specialising in edtech and e-commerce in identifying high-growth
-            startups across a broad investor network, and has offered coaching for edtech
-            startups under Injini's accelerator programme.
+            As an ESRC-funded PhD candidate at Queen Mary University of London, 
+            I build and analyse large-scale social networks to understand how protest movements in sub-Saharan Africa, 
+            particularly in Nigeria and Zimbabwe, mobilise collective political identity through digital platforms. 
+            My methods rigorously utilise Exponential Random Graph Models, Dynamic Network Actor Models, 
+            in-depth qualitative interviews across five actor strata, and original fieldwork insights conducted in Lagos, Nigeria. 
+            My theoretical contribution extends connective action theory through the lens of network architecture to a logic of collection, 
+            showing how the structural shape of digital conversation either concentrates or distributes political agency.
           </p>
           <p>
-            He has research interests in digital politics, contention, comparative politics,
-            African studies, African philosophy and the politics of migration governance.
+            Before the academy, I spent years building things: growth strategies for African tech startups in civictech, media and e-commerce, 
+            and constructing investment memos for seed-stage ventures. 
+            I’m a DreamVC LIVC Fellow, a former Venture Partner at Republic, 
+            a Pitch Champion at the London Venture Crawl, 
+            and the winner of Queen Mary's 3-Minute Thesis competition at both faculty and university levels.
+I am also published in peer-reviewed journals and edited volumes from Routledge and Palgrave Macmillan, 
+            and have presented my research at the LSE, Oxford, Manchester, and the African Studies Association's Annual Meeting, 
+            and peer-reviewed for five top-tier academic journals. 
           </p>
         </div>
 
