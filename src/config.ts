@@ -1,10 +1,8 @@
 // ============================================
-// WEBSITE CONFIGURATION - EASY TO EDIT
+// WEBSITE CONFIGURATION 
 // ============================================
 
 // HERO SECTION IMAGE
-// Simply change the path below to use a different image
-// Place your image in the public/images folder and update the path
 export const HERO_IMAGE = "./images/hero_portrait_new.png";
 
 // ABOUT SECTION IMAGE (Updated image)
