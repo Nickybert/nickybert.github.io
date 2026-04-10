@@ -32,7 +32,7 @@ const About = () => (
           </p>
           <p>
             As an ESRC-funded PhD candidate at Queen Mary University of London, 
-            I build and analyse large-scale social networks to understand how protest movements in sub-Saharan Africa, 
+            I build and analyse large-scale social networks to understand how protest movements in Africa, 
             particularly in Nigeria and Zimbabwe, mobilise collective political identity through digital platforms. 
             My methods rigorously utilise Exponential Random Graph Models, Dynamic Network Actor Models, 
             in-depth qualitative interviews across five actor strata, and original fieldwork insights conducted in Lagos, Nigeria. 
@@ -47,7 +47,7 @@ const About = () => (
             and the winner of Queen Mary's 3-Minute Thesis competition at both faculty and university levels.
 I am also published in top peer-reviewed journals and edited volumes from Routledge and Palgrave Macmillan, and have papers under review at <em>Contention</em>.
             I have also presented my research at and convened panels in digital politics at conferences and seminars at the LSE, QMUL, University of Basel, Oxford, AFPP Manchester, and the African Studies Association's Annual Meeting in the US, 
-            and peer-reviewed for five top-tier academic journals. 
+            and have also peer-reviewed for five top-tier academic journals. 
           </p>
         </div>
 
