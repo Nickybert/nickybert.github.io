@@ -28,7 +28,7 @@ const About = () => (
           </p>
           <p>
             My research sits at the intersection of computational social science, African digital politics, 
-            and technology governance — a convergence that makes me equally credible in academic research and product strategy rooms.
+            and technology governance — a convergence that makes me equally credible in academic research, product strategy and policy analysis rooms.
           </p>
           <p>
             As an ESRC-funded PhD candidate at Queen Mary University of London, 
