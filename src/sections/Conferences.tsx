@@ -7,6 +7,16 @@ const conferences = [
     location: 'Basel, Switzerland',
   },
   {
+    citation: 'Anakwue, N. (February, 2025). "Insider, Outsider and Networked: Navigating Positionality, Power and Trust in Studying Hashtag-driven Protest Movements in Sub-Saharan Africa", PhD Seminar Series in International Political Sociology (2025-2026), DoingIPS, London, UK.',
+    year: '2026',
+    location: 'London, UK',
+  },
+  {
+    citation: 'Anakwue, N. (February, 2025). "The shapes of digital contention in Sub-Saharan Africa: A comparative ERGM analysis of #EndSARS and #ThisFlag", Work-in-Progress Seminar Series, Centre for Governance and Democracy (CGD), Queen Mary University of London, London, UK.',
+    year: '2026',
+    location: 'London, UK',
+  },
+  {
     citation: 'Anakwue, N. (November, 2025). "Intellectual Elites, Digital Reconstruction and Historical Memory: A Case Study of the #ThisFlag Movement", African Studies Association (US), Annual Meeting, Atlanta, US.',
     year: '2025',
     location: 'Atlanta, US',
