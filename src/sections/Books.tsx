@@ -1,34 +1,47 @@
 import { ExternalLink } from 'lucide-react';
 
-const books = [
+interface BookEntry {
+  before: string;
+  venue: string;
+  after: string;
+  link: string;
+  year: string;
+  type: string;
+}
+
+const books: BookEntry[] = [
   {
-    before: 'Anakwue N. (2025). Sharlene Swartz, Tarryn De Kock, and Catherine A. Odora Hoppers, eds. Transformative Leadership in African Contexts: Strategies for Social Change. Cape Town: HSRC Press, 2024.',
-    venue:  'African Studies Review,',
-    after:  'doi:10.1017/asr.2025.10062',
+    before:
+      'Anakwue N. (2025). Sharlene Swartz, Tarryn De Kock, and Catherine A. Odora Hoppers, eds. Transformative Leadership in African Contexts: Strategies for Social Change. Cape Town: HSRC Press, 2024.',
+    venue: 'African Studies Review,',
+    after: 'doi:10.1017/asr.2025.10062',
     link: 'https://www.cambridge.org/core/journals/african-studies-review/article/sharlene-swartz-tarryn-de-kock-and-catherine-a-odora-hoppers-eds-transformative-leadership-in-african-contexts-strategies-for-social-change-cape-town-south-africa-hsrc-press-2024-462-pp-index-4500-paper-isbn-9780796926616/DECE6334DCDDD2418AFC9FFB4CDD6588',
     year: '2025',
     type: 'Book Review',
   },
   {
-    before: 'Ogbechie, R. & Anakwue, N. (2024). The role of management in business: The virtuous manager. In S. U. Ogbu & R. Ogbechie (Eds.).',
-    venue:  'Business Ethics in Africa (Vol. I).',
-    after:  'Cham: Palgrave Macmillan.',
+    before:
+      'Ogbechie, R. & Anakwue, N. (2024). The role of management in business: The virtuous manager. In S. U. Ogbu & R. Ogbechie (Eds.).',
+    venue: 'Business Ethics in Africa (Vol. I).',
+    after: 'Cham: Palgrave Macmillan.',
     link: 'https://link.springer.com/chapter/10.1007/978-3-031-64427-6_7',
     year: '2024',
     type: 'Book Chapter',
   },
   {
-    before: 'Anakwue, N. (2023). Re-centering Africa in the study of ancient philosophy: The legacy of ancient Egyptian philosophy. In M. Ward & M. Umachandran (Eds.).',
-    venue:  'Critical Ancient World Studies: The Case for Forgetting Classics.',
-    after:  'London: Routledge.',
+    before:
+      'Anakwue, N. (2023). Re-centering Africa in the study of ancient philosophy: The legacy of ancient Egyptian philosophy. In M. Ward & M. Umachandran (Eds.).',
+    venue: 'Critical Ancient World Studies: The Case for Forgetting Classics.',
+    after: 'London: Routledge.',
     link: 'https://www.taylorfrancis.com/chapters/oa-edit/10.4324/9781003222637-6/recentring-africa-study-ancient-philosophy-nicholas-chukwudike-anakwue',
     year: '2023',
     type: 'Book Chapter',
   },
   {
-    before: 'Ogbechie, R. & Anakwue, N. (2018). Ethical principles and practices in Africa. In U. Uzo & A. Kinoti (Eds.).',
-    venue:  'Indigenous management practices in Africa – Advanced Series in Management, Vol. 19.',
-    after:  'Bingley: Emerald.',
+    before:
+      'Ogbechie, R. & Anakwue, N. (2018). Ethical principles and practices in Africa. In U. Uzo & A. Kinoti (Eds.).',
+    venue: 'Indigenous management practices in Africa \u2013 Advanced Series in Management, Vol. 19.',
+    after: 'Bingley: Emerald.',
     link: 'https://bookstore.emerald.com/indigenous-management-practices-in-africa-hb-9781787548497.html',
     year: '2018',
     type: 'Book Chapter',
@@ -44,7 +57,7 @@ const Books = () => (
       </h2>
       <div className="space-y-4 stagger-children max-w-4xl">
         {books.map((book, i) => (
-          
+          <a
             key={i}
             href={book.link}
             target="_blank"
