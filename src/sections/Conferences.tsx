@@ -3,7 +3,7 @@ import { MapPin } from 'lucide-react';
 
 const conferences = [
   {
-    citation: 
+    citation:
       'Anakwue, N. (August 26-28, 2026). Panel Convenor, "Digital Citizenship, Political Belonging and Statehood in Contemporary Africa", Forthcoming SGAS–VAD Conference 2026, University of Basel, Switzerland.',
     year: '2026',
     location: 'Basel, Switzerland',
@@ -53,11 +53,11 @@ const conferences = [
 ];
 
 const Conferences = () => {
-  const listRef = useRef(null);
+  const listRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const items = listRef.current?.querySelectorAll('.conf-item');
-    if (!items) return;
+    const items = listRef.current?.querySelectorAll<HTMLElement>('.conf-item') ?? [];
+    if (!items.length) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -71,7 +71,7 @@ const Conferences = () => {
       { threshold: 0.1 }
     );
 
-    items.forEach((el) => observer.observe(el));
+    items.forEach((el: HTMLElement) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
 
