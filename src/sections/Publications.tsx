@@ -1,19 +1,30 @@
 import { ExternalLink } from 'lucide-react';
 
-const publications = [
+interface PublicationEntry {
+  before: string;
+  venue: string;
+  after: string;
+  link: string;
+  year: string;
+  journal: string;
+}
+
+const publications: PublicationEntry[] = [
   {
-    citation:
-      "Anakwue, N. (2018). The African origins of Greek philosophy: Ancient Egypt in retrospect. Phronimon: Journal of the South African Society for Greek Philosophy and the Humanities, 18: 167–180.",
-    link: "https://unisapressjournals.co.za/index.php/Phronimon/article/view/2361",
-    year: "2018",
-    journal: "Phronimon",
+    before: 'Anakwue, N. (2018). The African origins of Greek philosophy: Ancient Egypt in retrospect.',
+    venue: 'Phronimon: Journal of the South African Society for Greek Philosophy and the Humanities,',
+    after: '18: 167\u2013180.',
+    link: 'https://unisapressjournals.co.za/index.php/Phronimon/article/view/2361',
+    year: '2018',
+    journal: 'Phronimon',
   },
   {
-    citation:
-      "Anakwue, N. (2017). Nietzschean will to power and the politics of personalities in public diplomacy. SocialScientia Journal of Social Sciences and Humanities, 2(3): 1–15.",
-    link: "https://journals.aphriapub.com/index.php/SS/article/view/164",
-    year: "2017",
-    journal: "SocialScientia",
+    before: 'Anakwue, N. (2017). Nietzschean will to power and the politics of personalities in public diplomacy.',
+    venue: 'SocialScientia Journal of Social Sciences and Humanities,',
+    after: '2(3): 1\u201315.',
+    link: 'https://journals.aphriapub.com/index.php/SS/article/view/164',
+    year: '2017',
+    journal: 'SocialScientia',
   },
 ];
 
@@ -24,7 +35,6 @@ const Publications = () => (
       <h2 className="animate-slide-left text-[clamp(24px,2.6vw,36px)] font-semibold text-[#0B0D10] mb-8">
         Journal Articles
       </h2>
-
       <div className="space-y-4 stagger-children max-w-4xl">
         {publications.map((pub, i) => (
           <a
@@ -46,9 +56,9 @@ const Publications = () => (
                     {pub.journal}
                   </span>
                 </div>
-                <p className="text-[14px] text-[#0B0D10]/80 leading-relaxed">
-                  {pub.citation}
-                </p>
+                <p className="text-[14px] text-[#0B0D10]/80 leading-relaxed mb-2">
+                    {pub.before} <em>{pub.venue}</em> {pub.after}
+                    </p>
               </div>
               <ExternalLink
                 size={14}
