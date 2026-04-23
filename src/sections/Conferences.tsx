@@ -3,7 +3,7 @@ import { MapPin } from 'lucide-react';
 
 const conferences = [
   {
-    citation:
+    citation: 
       'Anakwue, N. (August 26-28, 2026). Panel Convenor, "Digital Citizenship, Political Belonging and Statehood in Contemporary Africa", Forthcoming SGAS–VAD Conference 2026, University of Basel, Switzerland.',
     year: '2026',
     location: 'Basel, Switzerland',
