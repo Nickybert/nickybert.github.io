@@ -3,53 +3,59 @@ import { MapPin } from 'lucide-react';
 
 const conferences = [
   {
-    citation:
-      'Anakwue, N. (August 26-28, 2026). Panel Convenor, "Digital Citizenship, Political Belonging and Statehood in Contemporary Africa", Forthcoming SGAS–VAD Conference 2026, University of Basel, Switzerland.',
+    before: 'Anakwue, N. (August 26-28, 2026). Panel Convenor, "Digital Citizenship, Political Belonging and Statehood in Contemporary Africa",',
+    venue:  'Forthcoming SGAS–VAD Conference 2026,',
+    after:  'University of Basel, Switzerland.',
     year: '2026',
     location: 'Basel, Switzerland',
   },
   {
-    citation:
-      'Anakwue, N. (February, 2026). "Insider, Outsider and Networked: Navigating Positionality, Power and Trust in Studying Hashtag-driven Protest Movements in Sub-Saharan Africa", PhD Seminar Series in International Political Sociology (2025-2026), DoingIPS, London, UK.',
+    before: 'Anakwue, N. (February, 2026). "Insider, Outsider and Networked: Navigating Positionality, Power and Trust in Studying Hashtag-driven Protest Movements in Sub-Saharan Africa",',
+    venue:  'PhD Seminar Series in International Political Sociology (2025-2026),',
+    after:  'DoingIPS, Imperial College, London, UK.',
     year: '2026',
     location: 'London, UK',
   },
   {
-    citation:
-      'Anakwue, N. (February, 2026). "The shapes of digital contention in Sub-Saharan Africa: A comparative ERGM analysis of #EndSARS and #ThisFlag", Work-in-Progress Seminar Series, Centre for Governance and Democracy (CGD), Queen Mary University of London, London, UK.',
+    before: 'Anakwue, N. (February, 2026). "The Shapes of Digital Contention in Sub-Saharan Africa: A Comparative ERGM Analysis of #EndSARS and #ThisFlag",',
+    venue:  'Work-in-Progress Seminar Series,',
+    after:  'Centre for Governance and Democracy (CGD), Queen Mary University of London, London, UK.',
     year: '2026',
     location: 'London, UK',
   },
   {
-    citation:
-      'Anakwue, N. (November, 2025). "Intellectual Elites, Digital Reconstruction and Historical Memory: A Case Study of the #ThisFlag Movement", African Studies Association (US), Annual Meeting, Atlanta, US.',
+    before: 'Anakwue, N. (November, 2025). "Intellectual Elites, Digital Reconstruction and Historical Memory: A Case Study of the #ThisFlag Movement",',
+    venue:  'African Studies Association (US), Annual Meeting,',
+    after:  'Atlanta, US.',
+    year: '2025',
+    location: 'Atlanta, US',  
+  },
+  {
+    before: 'Anakwue, N. (November, 2025). "Mobilising the Past for Contemporary Activism in the #ThisFlag Movement",',
+    venue:  'African Studies Association (US), Annual Meeting,',
+    after:  'Atlanta, US.',
     year: '2025',
     location: 'Atlanta, US',
   },
   {
-    citation:
-      'Anakwue, N. (November, 2025). "Mobilising the Past for Contemporary Activism in the #ThisFlag Movement", African Studies Association (US), Annual Meeting, Atlanta, US.',
-    year: '2025',
-    location: 'Atlanta, US',
-  },
-  {
-    citation:
-      'Anakwue, N. (June, 2025). "Tweets and the Streets: Mobilising Collective Political Identities in #EndSARS and #ThisFlag", Alternate Futures and Political Protest (AFPP) Conference, University of Manchester, UK.',
+    before: 'Anakwue, N. (June, 2025). "Tweets and the Streets: Mobilising Collective Political Identities in #EndSARS and #ThisFlag",',
+    venue:  'Alternate Futures and Political Protest (AFPP) Conference,',
+    after:  'University of Manchester, UK.',
     year: '2025',
     location: 'Manchester, UK',
   },
   {
-    citation:
-      'Anakwue, N. (July, 2024). "Re-imagining political identity: EndSARS and its impact on Tilly\'s WUNC framework", Digital Politics and Social Movements Workshop, University of York, UK.',
+    before: 'Anakwue, N. (July, 2024). "Re-imagining Political Identity: EndSARS and its Impact on Tilly\'s WUNC Framework",',
+    venue:  'Digital Politics and Social Movements Workshop,',
+    after:  'University of York, UK.',
     year: '2024',
-    location: 'York, UK',
-  },
+    location: 'York, UK',  },
   {
-    citation:
-      'Anakwue, N. (September, 2020). "Re-centering Africa in the study of ancient philosophy: The legacy of ancient Egyptian philosophy", Critical Ancient World Studies Workshop, University of Oxford, UK.',
+    before: 'Anakwue, N. (September, 2020). "Re-centering Africa in the Study of Ancient Philosophy: The Legacy of Ancient Egyptian Philosophy",',
+    venue:  'Critical Ancient World Studies Workshop,',
+    after:  'University of Oxford, UK.',
     year: '2020',
-    location: 'Oxford, UK',
-  },
+    location: 'Oxford, UK',  },
 ];
 
 const Conferences = () => {
@@ -125,7 +131,7 @@ const Conferences = () => {
                       </span>
                     </div>
                     <p className="text-[14px] text-[#0B0D10]/80 leading-relaxed mb-2">
-                      {conf.citation}
+                    {conf.before} <em>{conf.venue}</em> {conf.after}
                     </p>
                     <div className="flex items-center gap-1.5 text-[#0B0D10]/35">
                       <MapPin size={11} />
