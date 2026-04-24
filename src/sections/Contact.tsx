@@ -69,7 +69,7 @@ const Contact = () => (
           © {new Date().getFullYear()} {PERSONAL_INFO.name}. ALL RIGHTS RESERVED.
         </p>
         <p className="font-mono text-[0.58rem] tracking-[0.1em] uppercase text-[#F4F6F8]/20">
-          {PERSONAL_INFO.institution}
+          Built with React, CSS and TypeScript and hosted on Netlify
         </p>
       </div>
     </div>
