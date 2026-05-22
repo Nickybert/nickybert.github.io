@@ -32,7 +32,7 @@ const About = () => (
           </p>
           <p>
             As an ESRC-funded PhD candidate at Queen Mary University of London, 
-            I build and analyse large-scale social networks to understand how protest movements in Africa, 
+            I analyse large-scale social networks to understand how protest movements in Africa, 
             particularly in Nigeria and Zimbabwe, mobilise collective political identity through digital platforms. 
             My methods rigorously utilise Exponential Random Graph Models, Dynamic Network Actor Models, 
             in-depth qualitative interviews across five actor strata, and original 5-month fieldwork insights conducted in Nigeria. 
@@ -40,7 +40,7 @@ const About = () => (
             showing how the structural shapes of digital conversation either concentrate or distribute political agency in social movements.
           </p>
           <p>
-            Before the academy, I spent years building things: growth strategies for African tech startups in civictech, media and e-commerce, 
+            Before academia, I spent years designing and executing growth strategies for African tech startups in civictech, media and e-commerce, 
             and writing investment memos for seed-stage ventures. 
             I’m a DreamVC LIVC Fellow, a former Venture Partner at Republic, 
             a Pitch Champion at the London Venture Crawl, 
