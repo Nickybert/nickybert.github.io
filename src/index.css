@@ -41,8 +41,10 @@
     line-height: 1.65;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', Georgia, serif;
-    letter-spacing: -0.01em;
+    font-family: 'Pliant', Georgia, serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
   }
   .font-mono { font-family: 'IBM Plex Mono', monospace; }
 }
