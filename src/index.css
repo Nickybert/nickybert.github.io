@@ -41,7 +41,7 @@
     line-height: 1.65;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Google Sans', Georgia, serif;
+    font-family: 'Google Sans';
     font-weight: 700;
     text-transform: capitalize;
     letter-spacing: 0.12em;
