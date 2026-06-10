@@ -43,7 +43,7 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Pliant', Georgia, serif;
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: capitalize;
     letter-spacing: 0.12em;
   }
   .font-mono { font-family: 'IBM Plex Mono', monospace; }
