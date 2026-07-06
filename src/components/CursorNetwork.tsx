@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react';
 
-// Class remains safely outside the component
 class Particle {
   x: number;
   y: number;
