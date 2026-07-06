@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
-// Moved outside the component to fix TypeScript hoisting errors
+// Class remains safely outside the component
 class Particle {
   x: number;
   y: number;
@@ -35,7 +35,8 @@ class Particle {
   }
 }
 
-const CursorNetwork: React.FC = () => {
+// FIX: Removed React.FC and the generic React import to satisfy verbatimModuleSyntax
+const CursorNetwork = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
