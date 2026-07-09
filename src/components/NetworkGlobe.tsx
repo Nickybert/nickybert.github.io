@@ -36,15 +36,17 @@ const NetworkGlobe = () => {
       { lat: 35.0,  lng: 45.0 },
     ];
 
-    const resize = () => {
-      const size = Math.min(canvas.parentElement?.offsetWidth || 350, 500);
-      canvas.width = size;
-      canvas.height = size;
+    const resize = (canvasElem: HTMLCanvasElement) => {
+      const size = Math.min(canvasElem.parentElement?.offsetWidth || 350, 500);
+      canvasElem.width = size;
+      canvasElem.height = size;
     };
-    resize();
-    window.addEventListener('resize', resize);
+    
+    resize(canvas);
+    const handleResize = () => resize(canvas);
+    window.addEventListener('resize', handleResize);
 
-    const project3D = (lat: number, lng: number, globeRadius: number, currentRotation: number) => {
+    const project3D = (lat: number, lng: number, globeRadius: number, currentRotation: number, canvasWidth: number, canvasHeight: number) => {
       const radLat = (lat * Math.PI) / 180;
       const radLng = ((lng + currentRotation) * Math.PI) / 180;
 
@@ -52,8 +54,8 @@ const NetworkGlobe = () => {
       const y3d = globeRadius * Math.sin(radLat);
       const z3d = globeRadius * Math.cos(radLat) * Math.cos(radLng);
 
-      const centerX = canvas.width / 2;
-      const centerY = canvas.height / 2;
+      const centerX = canvasWidth / 2;
+      const centerY = canvasHeight / 2;
 
       return { x: centerX + x3d, y: centerY - y3d, z: z3d };
     };
@@ -70,7 +72,7 @@ const NetworkGlobe = () => {
       ctx.stroke();
 
       globeGrid.forEach((point) => {
-        const projected = project3D(point.lat, point.lng, globeRadius, angle);
+        const projected = project3D(point.lat, point.lng, globeRadius, angle, canvas.width, canvas.height);
         if (projected.z > 0) {
           const intensity = projected.z / globeRadius;
           ctx.beginPath();
@@ -81,7 +83,7 @@ const NetworkGlobe = () => {
       });
 
       const activeNodes = networkNodes.map((node) => 
-        project3D(node.lat, node.lng, globeRadius, angle)
+        project3D(node.lat, node.lng, globeRadius, angle, canvas.width, canvas.height)
       );
 
       ctx.lineWidth = 1.2;
@@ -127,7 +129,7 @@ const NetworkGlobe = () => {
     renderLoop();
 
     return () => {
-      window.removeEventListener('resize', resize);
+      window.removeEventListener('resize', handleResize);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);

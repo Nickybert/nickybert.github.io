@@ -1,10 +1,10 @@
-import NetworkGlobe from './NetworkGlobe.tsx';
+import NetworkGlobe from '@/components/NetworkGlobe';
 
 const About = () => (
   <section id="about" className="relative w-full min-h-[80vh] bg-[#F4F6F8] overflow-hidden z-20 py-[7vh] lg:py-[9vh]">
     <div className="w-full h-full px-4 sm:px-6 lg:px-[6vw] flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-[4vw]">
 
-      {/* Interactive Canvas Globe */}
+      {/* Interactive Canvas Globe Wrapper */}
       <div className="animate-slide-left w-[55vw] sm:w-[40vw] lg:w-[30vw] h-[34vh] lg:h-[58vh] shrink-0 flex items-center justify-center">
         <NetworkGlobe />
       </div>
