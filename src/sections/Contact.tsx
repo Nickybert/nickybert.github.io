@@ -18,7 +18,7 @@ const Contact = () => (
       <div className="max-w-2xl">
         {/* Label */}
         <div className="animate-on-scroll mb-4 flex items-center gap-2">
-          <span className="font-mono text-[0.6rem] tracking-[0.14em] uppercase text-[#C8332E]">Contact</span>
+          <span className="font-mono text-[0.6rem] tracking-[0.14em] uppercase text-[#C8332E]">Contact me</span>
           <span className="w-6 h-[1px] bg-[#C8332E]/40" />
         </div>
 
