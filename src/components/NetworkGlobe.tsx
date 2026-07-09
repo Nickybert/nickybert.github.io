@@ -1,62 +1,157 @@
-import { useEffect, useRef, useState } from 'react';
-import Globe from 'react-globe.gl';
+import { useEffect, useRef } from 'react';
+
+interface Point3D {
+  lat: number;
+  lng: number;
+}
 
 const NetworkGlobe = () => {
-  const globeEl = useRef<any>();
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  
-  const arcsData = [
-    { startLat: 9.08, startLng: 8.67, endLat: 51.5, endLng: -0.12 },   // Nigeria to London
-    { startLat: -19.01, startLng: 29.15, endLat: 51.5, endLng: -0.12 }, // Zimbabwe to London
-    { startLat: 9.08, startLng: 8.67, endLat: -19.01, endLng: 29.15 },  // Nigeria to Zimbabwe
-  ];
-
-  
   useEffect(() => {
-    const updateDimensions = () => {
-      if (containerRef.current) {
-        setDimensions({
-          width: containerRef.current.offsetWidth,
-          height: containerRef.current.offsetHeight
-        });
-      }
-    };
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    let animationFrameId: number;
+    let angle = 0;
+
     
-    updateDimensions();
-    window.addEventListener('resize', updateDimensions);
-    return () => window.removeEventListener('resize', updateDimensions);
-  }, []);
-
- 
-  useEffect(() => {
-    if (globeEl.current) {
-      globeEl.current.controls().autoRotate = true;
-      globeEl.current.controls().autoRotateSpeed = 1.2; // Speed of the turn
-      globeEl.current.controls().enableZoom = false;    // Prevents scroll-trapping
+    const globeGrid: Point3D[] = [];
+    for (let lat = -80; lat <= 80; lat += 8) {
+      const radLat = (lat * Math.PI) / 180;
+      const radiusAtLat = Math.cos(radLat);
+      const dotCount = Math.max(6, Math.floor(45 * radiusAtLat));
+      for (let i = 0; i < dotCount; i++) {
+        globeGrid.push({ lat, lng: (i * 360) / dotCount });
+      }
     }
+
+    
+    const networkNodes = [
+      { lat: 51.5,  lng: -0.12,  label: 'London' },
+      { lat: 9.08,  lng: 8.67,   label: 'Nigeria' },
+      { lat: -19.01, lng: 29.15,  label: 'Zimbabwe' },
+      { lat: 25.0,  lng: -40.0,  label: 'Atlantic Node' },
+      { lat: -10.0, lng: -60.0,  label: 'South America Node' },
+      { lat: 35.0,  lng: 45.0,   label: 'Middle East Node' },
+    ];
+
+    const resize = () => {
+      const size = Math.min(canvas.parentElement?.offsetWidth || 350, 500);
+      canvas.width = size;
+      canvas.height = size;
+    };
+    resize();
+    window.addEventListener('resize', resize);
+
+    
+    const project3D = (lat: number, lng: number, globeRadius: number, currentRotation: number) => {
+      const radLat = (lat * Math.PI) / 180;
+      const radLng = ((lng + currentRotation) * Math.PI) / 180;
+
+      const x3d = globeRadius * Math.cos(radLat) * Math.sin(radLng);
+      const y3d = globeRadius * Math.sin(radLat);
+      const z3d = globeRadius * Math.cos(radLat) * Math.cos(radLng);
+
+      const centerX = canvas.width / 2;
+      const centerY = canvas.height / 2;
+
+      return {
+        x: centerX + x3d,
+        y: centerY - y3d,
+        z: z3d
+      };
+    };
+
+    const renderLoop = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const globeRadius = canvas.width * 0.38;
+      angle += 0.4; 
+
+     
+      ctx.beginPath();
+      ctx.arc(canvas.width / 2, canvas.height / 2, globeRadius, 0, Math.PI * 2);
+      ctx.strokeStyle = 'rgba(11, 13, 16, 0.04)';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
+      
+      globeGrid.forEach((point) => {
+        const projected = project3D(point.lat, point.lng, globeRadius, angle);
+        if (projected.z > 0) { 
+          const intensity = projected.z / globeRadius;
+          ctx.beginPath();
+          ctx.arc(projected.x, projected.y, 0.8, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(11, 13, 16, ${intensity * 0.25})`;
+          ctx.fill();
+        }
+      });
+
+      
+      const activeNodes = networkNodes.map((node) => ({
+        ...project3D(node.lat, node.lng, globeRadius, angle),
+        label: node.label
+      }));
+
+      
+      ctx.lineWidth = 1.2;
+      for (let i = 0; i < activeNodes.length; i++) {
+        for (let j = i + 1; j < activeNodes.length; j++) {
+          const nodeA = activeNodes[i];
+          const nodeB = activeNodes[j];
+
+          
+          if (nodeA.z > -40 && nodeB.z > -40) {
+            const structuralDepth = Math.min(nodeA.z, nodeB.z);
+            const intensity = (structuralDepth + globeRadius) / (2 * globeRadius);
+
+            ctx.beginPath();
+            ctx.moveTo(nodeA.x, nodeA.y);
+            
+            
+            const midX = (nodeA.x + nodeB.x) / 2;
+            const midY = (nodeA.y + nodeB.y) / 2 - (globeRadius * 0.12);
+            
+            ctx.quadraticCurveTo(midX, midY, nodeB.x, nodeB.y);
+            ctx.strokeStyle = `rgba(200, 51, 46, ${intensity * 0.35})`; // Accent theme red
+            ctx.stroke();
+          }
+        }
+      }
+
+      
+      activeNodes.forEach((node) => {
+        if (node.z > 0) {
+          const intensity = node.z / globeRadius;
+
+          
+          ctx.beginPath();
+          ctx.arc(node.x, node.y, 4, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(200, 51, 46, ${intensity * 0.15})`;
+          ctx.fill();
+
+          
+          ctx.beginPath();
+          ctx.arc(node.x, node.y, 1.8, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(200, 51, 46, ${intensity})`;
+          ctx.fill();
+        }
+      });
+
+      animationFrameId = requestAnimationFrame(renderLoop);
+    };
+
+    renderLoop();
+
+    return () => {
+      window.removeEventListener('resize', resize);
+      cancelAnimationFrame(animationFrameId);
+    };
   }, []);
 
-  return (
-    <div ref={containerRef} className="w-full h-full flex items-center justify-center">
-      {dimensions.width > 0 && (
-        <Globe
-          ref={globeEl}
-          width={dimensions.width}
-          height={dimensions.height}
-          backgroundColor="rgba(0,0,0,0)" // Transparent background
-          globeImageUrl="//unpkg.com/three-globe/example/img/earth-dark.jpg" // Sleek dark map
-          arcsData={arcsData}
-          arcColor={() => '#C8332E'} // Your specific brand red
-          arcDashLength={0.4}
-          arcDashGap={0.2}
-          arcDashAnimateTime={1500} // Makes the lines look like flowing data
-          arcStroke={1.5}
-        />
-      )}
-    </div>
-  );
+  return <canvas ref={canvasRef} className="block select-none pointer-events-none" />;
 };
 
 export default NetworkGlobe;
