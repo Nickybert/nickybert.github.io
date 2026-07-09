@@ -5,7 +5,7 @@ const About = () => (
       {/* Replaced Interactive Globe with your Conceptual Image */}
       <div className="animate-slide-left w-[55vw] sm:w-[40vw] lg:w-[30vw] h-[34vh] lg:h-[58vh] shrink-0 flex items-center justify-center">
         <img 
-          src="/network-globe.jpg" 
+          src="/network-globe.jpg.png" 
           alt="Digital Network Concept" 
           className="w-full h-full object-contain rounded-2xl drop-shadow-2xl transition-transform duration-700 hover:scale-[1.02]"
         />
