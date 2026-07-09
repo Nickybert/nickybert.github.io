@@ -12,15 +12,6 @@ const Hero = () => (
   <section className="relative w-full min-h-screen bg-[#F4F6F8] overflow-hidden z-10">
     <div className="w-full min-h-screen px-4 sm:px-6 lg:px-[6vw] py-[8vh] flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-[5vw]">
 
-      {/* ── Left: text ─────────────────────────────────────── */}
-      <div className="flex flex-col justify-center w-full lg:w-[45vw] order-2 lg:order-1 pt-16 lg:pt-0">
-        {/* Eyebrow label */}
-        <div className="hero-socials mb-5">
-          <span className="section-label" style={{ marginBottom: 0 }}>
-            PhD Researcher
-          </span>
-        </div>
-
         {/* Name */}
         <h1
           className="text-[clamp(44px,7.5vw,96px)] font-semibold leading-[0.88] tracking-[-0.02em] text-[#0B0D10] mb-6"
