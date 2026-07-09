@@ -2,9 +2,9 @@ import { Linkedin, Twitter, Github, GraduationCap } from 'lucide-react';
 import { HERO_IMAGE, PERSONAL_INFO, SOCIAL_LINKS } from '../config';
 
 const socialLinks = [
-  { icon: Linkedin,     href: SOCIAL_LINKS.linkedin, label: 'LinkedIn' },
-  { icon: Twitter,      href: SOCIAL_LINKS.twitter,  label: 'X (Twitter)' },
-  { icon: Github,       href: SOCIAL_LINKS.github,   label: 'GitHub' },
+  { icon: Linkedin,      href: SOCIAL_LINKS.linkedin, label: 'LinkedIn' },
+  { icon: Twitter,       href: SOCIAL_LINKS.twitter,  label: 'X (Twitter)' },
+  { icon: Github,        href: SOCIAL_LINKS.github,   label: 'GitHub' },
   { icon: GraduationCap, href: SOCIAL_LINKS.orcid,  label: 'ORCID' },
 ];
 
@@ -12,6 +12,8 @@ const Hero = () => (
   <section className="relative w-full min-h-screen bg-[#F4F6F8] overflow-hidden z-10">
     <div className="w-full min-h-screen px-4 sm:px-6 lg:px-[6vw] py-[8vh] flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-[5vw]">
 
+      {/* ── Left: Text Content ─────────────────────────────────── */}
+      <div className="flex flex-col order-2 lg:order-1 max-w-2xl">
         {/* Name */}
         <h1
           className="text-[clamp(44px,7.5vw,96px)] font-semibold leading-[0.88] tracking-[-0.02em] text-[#0B0D10] mb-6"
@@ -30,7 +32,7 @@ const Hero = () => (
           Digital politics · Social movements · Computational social science
         </p>
 
-        {/* CTA */}
+        {/* CTA to drive engagement to my email */}
         <div className="hero-cta mb-8 border-l-2 border-[#C8332E]/30 pl-4">
           <p className="text-xs text-[#6B7280] mb-0.5 font-mono tracking-wide uppercase">Drop me a mail</p>
           <a
@@ -67,7 +69,7 @@ const Hero = () => (
             alt={PERSONAL_INFO.name}
             className="w-full h-full object-cover"
           />
-          {/* Subtle red corner accent */}
+          {/* Subtle red corner accent for my cards */}
           <span className="absolute bottom-0 right-0 w-16 h-16 bg-[#C8332E]/10 pointer-events-none" />
         </div>
       </div>
