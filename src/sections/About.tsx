@@ -1,17 +1,13 @@
-// ── Africa image ──────────────
-
-import { AFRICA_IMAGE } from '../config';
 import NetworkGlobe from './NetworkGlobe.tsx';
 
 const About = () => (
   <section id="about" className="relative w-full min-h-[80vh] bg-[#F4F6F8] overflow-hidden z-20 py-[7vh] lg:py-[9vh]">
     <div className="w-full h-full px-4 sm:px-6 lg:px-[6vw] flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-[4vw]">
 
-      {/* Africa Globe Graphic */}
+      {/* Interactive Canvas Globe */}
       <div className="animate-slide-left w-[55vw] sm:w-[40vw] lg:w-[30vw] h-[34vh] lg:h-[58vh] shrink-0 flex items-center justify-center">
         <NetworkGlobe />
       </div>
-
 
       {/* Bio */}
       <div className="animate-slide-right w-full lg:w-[52vw] max-w-2xl">
@@ -47,7 +43,7 @@ const About = () => (
             I’m a DreamVC LIVC Fellow, a former Venture Partner at Republic, 
             a Pitch Champion at the London Venture Crawl, 
             and the winner of Queen Mary's 3-Minute Thesis competition at both faculty and university levels.
-I am also published in top peer-reviewed journals and edited volumes from Routledge and Palgrave Macmillan, and have a paper under review at <em>Contention</em>.
+            I am also published in top peer-reviewed journals and edited volumes from Routledge and Palgrave Macmillan, and have a paper under review at <em>Contention</em>.
             I have also presented my research at and convened panels in digital politics at conferences and seminars at the LSE, QMUL, University of Basel, Oxford, AFPP Manchester, and the African Studies Association's Annual Meeting in the US, 
             and have also peer-reviewed for five top-tier academic journals. 
           </p>
@@ -61,8 +57,6 @@ I am also published in top peer-reviewed journals and edited volumes from Routle
             </span>
           ))}
         </div>
-
-        
       </div>
 
     </div>

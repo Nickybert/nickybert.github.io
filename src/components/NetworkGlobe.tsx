@@ -14,7 +14,6 @@ const NetworkGlobe = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    
     let animationFrameId = 0; 
     let angle = 0;
 
@@ -29,12 +28,12 @@ const NetworkGlobe = () => {
     }
 
     const networkNodes = [
-      { lat: 51.5,  lng: -0.12,  label: 'London' },
-      { lat: 9.08,  lng: 8.67,   label: 'Nigeria' },
-      { lat: -19.01, lng: 29.15,  label: 'Zimbabwe' },
-      { lat: 25.0,  lng: -40.0,  label: 'Atlantic Node' },
-      { lat: -10.0, lng: -60.0,  label: 'South America Node' },
-      { lat: 35.0,  lng: 45.0,   label: 'Middle East Node' },
+      { lat: 51.5,  lng: -0.12 },
+      { lat: 9.08,  lng: 8.67 },
+      { lat: -19.01, lng: 29.15 },
+      { lat: 25.0,  lng: -40.0 },
+      { lat: -10.0, lng: -60.0 },
+      { lat: 35.0,  lng: 45.0 },
     ];
 
     const resize = () => {
@@ -81,10 +80,9 @@ const NetworkGlobe = () => {
         }
       });
 
-      const activeNodes = networkNodes.map((node) => ({
-        ...project3D(node.lat, node.lng, globeRadius, angle),
-        label: node.label
-      }));
+      const activeNodes = networkNodes.map((node) => 
+        project3D(node.lat, node.lng, globeRadius, angle)
+      );
 
       ctx.lineWidth = 1.2;
       for (let i = 0; i < activeNodes.length; i++) {
