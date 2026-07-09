@@ -10,7 +10,7 @@ import KofiButton from './components/KofiButton'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <CursorNetwork />
-    <KofiButton /> {/* Put in to Renders my new floating button */}
+    <KofiButton /> {/* Put in to render my new floating button on the homepage */}
     <App />
   </StrictMode>,
 )
