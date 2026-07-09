@@ -1,14 +1,14 @@
 // ── Africa image ──────────────
 
-import { AFRICA_IMAGE } from '../config';
+import NetworkGlobe from './NetworkGlobe';
 
 const About = () => (
   <section id="about" className="relative w-full min-h-[80vh] bg-[#F4F6F8] overflow-hidden z-20 py-[7vh] lg:py-[9vh]">
     <div className="w-full h-full px-4 sm:px-6 lg:px-[6vw] flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-[4vw]">
 
       {/* Africa Graphic */}
-      <div className="animate-slide-left w-[55vw] sm:w-[40vw] lg:w-[30vw] h-[34vh] lg:h-[58vh] shrink-0">
-        <img src={AFRICA_IMAGE} alt="Africa" className="w-full h-full object-contain" />
+      <div className="animate-slide-left w-[55vw] sm:w-[40vw] lg:w-[30vw] h-[34vh] lg:h-[58vh] shrink-0 cursor-grab active:cursor-grabbing">
+        <NetworkGlobe />
       </div>
 
       {/* Bio */}
