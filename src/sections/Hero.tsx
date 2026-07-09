@@ -41,7 +41,7 @@ const Hero = () => (
 
         {/* CTA */}
         <div className="hero-cta mb-8 border-l-2 border-[#C8332E]/30 pl-4">
-          <p className="text-xs text-[#6B7280] mb-0.5 font-mono tracking-wide uppercase">Collaborate</p>
+          <p className="text-xs text-[#6B7280] mb-0.5 font-mono tracking-wide uppercase">Drop me a mail</p>
           <a
             href={`mailto:${PERSONAL_INFO.email}`}
             className="text-sm text-[#0B0D10] font-medium text-link"
