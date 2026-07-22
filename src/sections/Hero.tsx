@@ -76,11 +76,6 @@ const Hero = () => (
 
     </div>
 
-    {/* Scroll indicator */}
-    <div className="hero-cta absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 opacity-40">
-      <span className="font-mono text-[0.55rem] tracking-[0.14em] uppercase text-[#0B0D10]">Scroll</span>
-      <span className="w-[1px] h-8 bg-[#0B0D10] animate-[pulse_2s_ease-in-out_infinite]" />
-    </div>
   </section>
 );
 
