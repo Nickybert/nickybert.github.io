@@ -2,16 +2,15 @@ const About = () => (
   <section id="about" className="relative w-full min-h-[80vh] bg-[#F4F6F8] overflow-hidden z-20 py-[7vh] lg:py-[9vh]">
     <div className="w-full h-full px-4 sm:px-6 lg:px-[6vw] flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-[4vw]">
 
-      {/* Replaced Interactive Globe with your Conceptual Image */}
-      <div className="animate-slide-left w-[55vw] sm:w-[40vw] lg:w-[30vw] h-[34vh] lg:h-[58vh] shrink-0 flex items-center justify-center">
+     <div className="animate-slide-left w-[65vw] sm:w-[48vw] lg:w-[38vw] h-[40vh] lg:h-[65vh] shrink-0 flex items-center justify-center">
         <img 
           src="/network-globe.jpg.png" 
           alt="Digital Network Concept" 
-          className="w-full h-full object-contain rounded-2xl drop-shadow-2xl transition-transform duration-700 hover:scale-[1.02]"
+          className="w-full h-full object-contain rounded-2xl drop-shadow-2xl scale-[1.15] transition-transform duration-700 hover:scale-[1.18]"
         />
       </div>
-
-      {/* Bio */}
+      
+      {/*Div container with my bio*/}
       <div className="animate-slide-right w-full lg:w-[52vw] max-w-2xl">
         <div className="section-label">About</div>
         <h2 className="text-[clamp(22px,2.2vw,30px)] font-semibold text-[#0B0D10] mb-5">
