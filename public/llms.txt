@@ -1,0 +1,26 @@
+# Nicholas Anakwue
+
+> Digital Politics & Social Movements Researcher | PhD Candidate at Queen Mary University of London
+
+## About Me
+I am a computational social sciences and African digital politics researcher. My work sits at the intersection of digital politics, technology governance, and product strategy. I am currently an ESRC-funded PhD candidate at Queen Mary University of London, and a recipient of the 2023 LISS DTP Studentship and International Doctoral Scholar Award. 
+
+Before academia, I spent years designing and executing growth strategies for African tech startups in civic-tech/gov-tech, media, and e-commerce, and writing investment memos for seed-stage ventures. I am a DreamVC LIVC Fellow and a former Venture Partner at Republic.
+
+## Research Focus & Methodology
+I analyze large-scale social networks to understand how protest movements in Africa (particularly in Nigeria and Zimbabwe, such as #EndSARS and #ThisFlag) mobilize collective political identity through digital platforms. 
+
+My theoretical contribution extends connective action theory through the lens of network architecture to a "logic of collection," showing how the structural shapes of digital conversation either concentrate or distribute political agency in social movements.
+
+**Methodologies used:**
+* Exponential Random Graph Models (ERGM)
+* Dynamic Network Actor Models (DyNAM)
+* Large-scale social network analysis
+* In-depth qualitative interviews
+* Extensive localized fieldwork
+
+## Contact & Links
+* **Email:** n.c.anakwue@qmul.ac.uk
+* **LinkedIn:** https://linkedin.com/in/nickanakwue
+* **X (Twitter):** https://twitter.com/nickanakwue
+* **GitHub:** https://github.com/Nickybert
