@@ -6,6 +6,7 @@
 
 @layer base {
   :root {
+    /* --- LIGHT MODE (Default) for interactive design -- */
     --background: 220 14% 96%;
     --foreground: 220 20% 6%;
     --card: 0 0% 100%;
@@ -28,6 +29,53 @@
     --radius: 0.625rem;
     --clr-red: #C8332E;
     --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+    /* variables for specific elements that had hardcoded hex colors */
+    --scrollbar-track: #F4F6F8;
+    --scrollbar-thumb: #C8CBD0;
+    --scrollbar-thumb-hover: #9CA3AF;
+    --selection-bg: rgba(200,51,46,0.15);
+    --selection-text: #0B0D10;
+    --nav-link-color: #0B0D10;
+    --card-bg-override: #fff; 
+    --icon-btn-border: rgba(11,13,16,0.18);
+    --icon-btn-color: #0B0D10;
+    --section-light-bg: #F4F6F8;
+    --section-dark-bg: #0B0D10; 
+  }
+
+  /* DARK MODE overrides */
+  [data-theme='dark'] {
+    --background: 220 15% 8%;    
+    --foreground: 220 10% 90%;   
+    --card: 220 15% 12%;       
+    --card-foreground: 220 10% 90%;
+    --popover: 220 15% 12%;
+    --popover-foreground: 220 10% 90%;
+    --primary: 220 10% 90%;     
+    --primary-foreground: 220 15% 8%; 
+    --secondary: 220 10% 65%;   
+    --secondary-foreground: 220 10% 90%;
+    --muted: 220 15% 16%;      
+    --muted-foreground: 220 10% 65%;
+    --accent: 0 68% 54%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%; 
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 15% 20%;    
+    --input: 220 15% 20%;
+    --ring: 0 68% 54%;
+
+    --scrollbar-track: #1A1D21;   
+    --scrollbar-thumb: #444950;  
+    --scrollbar-thumb-hover: #606770;
+    --selection-bg: rgba(200,51,46,0.25); 
+    --selection-text: #F4F6F8;  
+    --nav-link-color: #F4F6F8;   
+    --card-bg-override: var(--card); 
+    --icon-btn-border: rgba(244,246,248,0.25); 
+    --icon-btn-color: #F4F6F8;   
+    --section-light-bg: #1A1D21; 
   }
 }
 
@@ -39,14 +87,19 @@
     font-family: 'DM Sans', system-ui, sans-serif;
     font-size: 16px;
     line-height: 1.65;
+    /* smooth transitions to body and common elements */
+    transition: background-color 0.3s var(--ease-out-expo), color 0.3s var(--ease-out-expo);
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', sans-serif;
     font-weight: 700;
     text-transform: capitalize;
     letter-spacing: -0.01em;
+    /* Transition for heading text color */
+    transition: color 0.3s var(--ease-out-expo);
   }
   .font-mono { font-family: 'IBM Plex Mono', monospace; }
+  svg { fill: currentColor; } 
 }
 
 /* Progress bar */
@@ -66,13 +119,20 @@
   z-index: 9998; opacity: 0.03;
   mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  
+}
+
+[data-theme='dark'] .grain-overlay {
+  mix-blend-mode: screen;
+  opacity: 0.015; /* Subtler in dark mode */
 }
 
 @layer utilities {
   .text-balance { text-wrap: balance; }
   .text-accent  { color: var(--clr-red); }
-  .section-light { background-color: #F4F6F8; }
-  .section-dark  { background-color: #0B0D10; }
+  /* variables for utility classes instead of hardcoded hex */
+  .section-light { background-color: var(--section-light-bg); transition: background-color 0.3s ease; }
+  .section-dark  { background-color: var(--section-dark-bg); }
 
   .section-label {
     font-family: 'IBM Plex Mono', monospace;
@@ -97,11 +157,13 @@
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: #F4F6F8; }
-::-webkit-scrollbar-thumb { background: #C8CBD0; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #9CA3AF; }
+/* variables for scrollbar colors */
+::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover); }
 
-::selection { background-color: rgba(200,51,46,0.15); color: #0B0D10; }
+/* variables for selection colors */
+::selection { background-color: var(--selection-bg); color: var(--selection-text); }
 
 /* ── Scroll Animations ─────────────────────────────────── */
 .animate-on-scroll {
@@ -165,7 +227,7 @@
 .hero-word:nth-child(2) > span { animation-delay: 0.1s; }
 
 .hero-subheadline { animation: fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.32s both; }
-.hero-cta         { animation: fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.44s both; }
+.hero-cta          { animation: fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.44s both; }
 .hero-socials     { animation: fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.54s both; }
 .hero-portrait    { animation: fadeInRight 1s cubic-bezier(0.16,1,0.3,1) 0.12s both; }
 
@@ -176,8 +238,9 @@
   font-size: 0.625rem;
   letter-spacing: 0.13em;
   text-transform: uppercase;
-  color: #0B0D10;
-  transition: color 0.2s;
+  /* variable for nav link color */
+  color: var(--nav-link-color);
+  transition: color 0.2s, background-color 0.3s ease; 
   background: none;
   border: none;
   cursor: pointer;
@@ -199,12 +262,13 @@
 
 /* ── Cards ─────────────────────────────────────────────── */
 .card-base {
-  background: #fff;
+  /* variable for card background instead of hardcoded hex */
+  background: var(--card-bg-override);
   border-radius: 8px;
   padding: 1.2rem 1.4rem;
   position: relative;
   overflow: hidden;
-  transition: box-shadow 0.3s cubic-bezier(0.16,1,0.3,1), transform 0.3s cubic-bezier(0.16,1,0.3,1);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s cubic-bezier(0.16,1,0.3,1), transform 0.3s cubic-bezier(0.16,1,0.3,1);
   box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 4px 14px rgba(0,0,0,0.05);
 }
 .card-base::before {
@@ -228,9 +292,10 @@
   width: 2.2rem; height: 2.2rem;
   display: flex; align-items: center; justify-content: center;
   border-radius: 50%;
-  border: 1.5px solid rgba(11,13,16,0.18);
-  color: #0B0D10;
-  transition: background 0.22s, border-color 0.22s, color 0.22s, transform 0.18s;
+  /* variables for icon button borders and color */
+  border: 1.5px solid var(--icon-btn-border);
+  color: var(--icon-btn-color);
+  transition: background 0.22s, border-color 0.22s, color 0.22s, transform 0.18s, background-color 0.3s ease;
   cursor: pointer;
 }
 .icon-btn:hover {
@@ -239,6 +304,7 @@
   color: #fff;
   transform: translateY(-2px);
 }
+
 .icon-btn-light {
   border-color: rgba(244,246,248,0.22);
   color: #F4F6F8;
@@ -259,7 +325,7 @@
 /* ── Africa SVG pulsing dots ───────────────────────────── */
 @keyframes dotPulse {
   0%, 100% { opacity: 0.5; transform: scale(1); }
-  50%       { opacity: 1;   transform: scale(1.6); }
+  50%        { opacity: 1;  transform: scale(1.6); }
 }
 .africa-dot {
   animation: dotPulse 2.8s ease-in-out infinite;
