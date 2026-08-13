@@ -9,14 +9,14 @@ const socialLinks = [
 ];
 
 const Hero = () => (
-  <section className="relative w-full min-h-screen bg-[#F4F6F8] overflow-hidden z-10">
+  <section className="relative w-full min-h-screen bg-background transition-colors duration-300 overflow-hidden z-10">
     <div className="w-full min-h-screen px-4 sm:px-6 lg:px-[6vw] py-[8vh] flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-[5vw]">
 
       {/* ── Left: Text Content ─────────────────────────────────── */}
       <div className="flex flex-col order-2 lg:order-1 max-w-2xl">
         {/* Name */}
         <h1
-          className="text-[clamp(44px,7.5vw,96px)] font-semibold leading-[0.88] tracking-[-0.02em] text-[#0B0D10] mb-6"
+          className="text-[clamp(44px,7.5vw,96px)] font-semibold leading-[0.88] tracking-[-0.02em] text-foreground transition-colors duration-300 mb-6"
           style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
         >
           <span className="hero-word"><span>Nicholas</span></span>
@@ -24,11 +24,11 @@ const Hero = () => (
         </h1>
 
         {/* Sub-headline */}
-        <p className="hero-subheadline text-base lg:text-lg text-[#0B0D10]/70 mb-2 max-w-md leading-relaxed">
+        <p className="hero-subheadline text-base lg:text-lg text-muted-foreground transition-colors duration-300 mb-2 max-w-md leading-relaxed">
           {PERSONAL_INFO.title},{' '}
           <span className="text-[#C8332E] font-medium">{PERSONAL_INFO.institution}</span>
         </p>
-        <p className="hero-subheadline text-sm text-[#0B0D10]/50 mb-8 max-w-md" style={{ animationDelay: '0.38s' }}>
+        <p className="hero-subheadline text-sm text-muted-foreground mb-8 max-w-md" style={{ animationDelay: '0.38s' }}>
           Digital politics · Social movements · Computational social science
         </p>
 
@@ -37,7 +37,7 @@ const Hero = () => (
           <p className="text-xs text-[#6B7280] mb-0.5 font-mono tracking-wide uppercase">Drop me a mail</p>
           <a
             href={`mailto:${PERSONAL_INFO.email}`}
-            className="text-sm text-[#0B0D10] font-medium text-link"
+            className="text-sm text-foreground font-medium text-link"
           >
             {PERSONAL_INFO.email}
           </a>

@@ -49,7 +49,7 @@ const Navigation = () => {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? 'bg-[#F4F6F8]/92 backdrop-blur-md shadow-[0_1px_0_rgba(0,0,0,0.06)] py-3'
+            ? 'bg-background/92 backdrop-blur-md shadow-[0_1px_0_rgba(0,0,0,0.06)] py-3'
             : 'bg-transparent py-5'
         }`}
       >
@@ -57,7 +57,7 @@ const Navigation = () => {
           {/* Logo */}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="font-mono text-[0.6rem] tracking-[0.14em] uppercase text-[#0B0D10] hover:text-[#C8332E] transition-colors"
+            className="font-mono text-[0.6rem] tracking-[0.14em] uppercase text-foreground hover:text-[#C8332E] transition-colors"
           >
             {PERSONAL_INFO.name}
           </button>
@@ -78,7 +78,7 @@ const Navigation = () => {
           {/* Mobile toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-1 text-[#0B0D10]"
+            className="md:hidden p-1 text-foreground"
             aria-label="Toggle menu"
           >
             {mobileOpen ? <X size={22} /> : <Menu size={22} />}
@@ -88,7 +88,7 @@ const Navigation = () => {
 
       {/* Mobile overlay */}
       <div
-        className={`fixed inset-0 z-40 bg-[#F4F6F8] flex flex-col items-center justify-center
+        className={`fixed inset-0 z-40 bg-background flex flex-col items-center justify-center
           transition-all duration-500 md:hidden ${
             mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
           }`}
@@ -96,7 +96,7 @@ const Navigation = () => {
         {/* Close button top-right */}
         <button
           onClick={() => setMobileOpen(false)}
-          className="absolute top-5 right-5 p-2 text-[#0B0D10]"
+          className="absolute top-5 right-5 p-2 text-foreground"
           aria-label="Close menu"
         >
           <X size={22} />
@@ -107,7 +107,7 @@ const Navigation = () => {
             <button
               key={link.label}
               onClick={() => scrollTo(link.href)}
-              className="font-display text-[clamp(28px,8vw,48px)] font-semibold text-[#0B0D10] hover:text-[#C8332E] transition-colors"
+              className="font-display text-[clamp(28px,8vw,48px)] font-semibold text-foreground hover:text-[#C8332E] transition-colors"
               style={{
                 fontFamily: "'Playfair Display', Georgia, serif",
                 transitionDelay: mobileOpen ? `${i * 0.05}s` : '0s',
@@ -118,7 +118,7 @@ const Navigation = () => {
           ))}
         </nav>
 
-        <p className="absolute bottom-8 font-mono text-[0.6rem] tracking-[0.14em] uppercase text-[#0B0D10]/40">
+        <p className="absolute bottom-8 font-mono text-[0.6rem] tracking-[0.14em] uppercase text-muted-foreground">
           {PERSONAL_INFO.name}
         </p>
       </div>
