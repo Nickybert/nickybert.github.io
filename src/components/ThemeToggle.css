@@ -1,0 +1,64 @@
+/* src/components/ThemeToggle.css */
+
+.theme-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toggle-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-color); /* Uses global variable */
+}
+
+/* The visual switch container */
+.theme-toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 22px;
+}
+
+/* Hide the actual checkbox */
+.theme-toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider background/track */
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--toggle-track); /* Uses variable */
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+/* The circular handle */
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: var(--toggle-thumb); /* Uses variable */
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* When the checkbox is checked, change track color */
+input:checked + .toggle-slider {
+  background-color: #2196F3; /* Bright blue for dark mode active */
+}
+
+/* When the checkbox is checked, move the handle */
+input:checked + .toggle-slider:before {
+  transform: translateX(22px);
+}
