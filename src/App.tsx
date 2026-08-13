@@ -1,3 +1,4 @@
+/* src/App.tsx */
 import { useEffect, useRef } from 'react';
 import Hero from './sections/Hero';
 import About from './sections/About';
@@ -9,6 +10,10 @@ import Conferences from './sections/Conferences';
 import Engagements from './sections/Engagements';
 import Contact from './sections/Contact';
 import Navigation from './sections/Navigation';
+/* ========================================================================= */
+
+import ThemeToggle from './components/ThemeToggle'; 
+/* ========================================================================= */
 
 function App() {
   const progressRef = useRef<HTMLDivElement>(null);
@@ -56,8 +61,23 @@ function App() {
       {/* Grain overlay */}
       <div className="grain-overlay" />
 
-      {/* Navigation */}
-      <Navigation />
+      {/* ========================================================================= */
+      /* Navigation and Theme Toggle */
+      /* Assuming Navigation is a standard component, I place ThemeToggle next to it.
+         We add positioning styles to ThemeToggle to place it at the top right,
+         floating above the other sections. */}
+      <div className="relative">
+        <Navigation />
+        
+        {}
+        {/* I use 'absolute' positioning to put the toggle in the top-right corner.
+            I use high z-index to keep it above other content.
+            The `p-4` ensures padding from the corner. */}
+        <div className="absolute top-0 right-0 p-4 z-[9997]"> 
+          <ThemeToggle />
+        </div>
+        {/* ========================================================================= */}
+      </div>
 
       {/* Main content */}
       <main className="relative">
