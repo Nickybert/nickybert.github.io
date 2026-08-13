@@ -4,10 +4,14 @@ import { useState, useEffect } from 'react';
 type Theme = 'light' | 'dark';
 
 export const useTheme = (): [Theme, () => void] => {
-  // localStorage to remember the choice of the visitor, default to 'light'
   const [theme, setTheme] = useState<Theme>(() => {
+    // Check localStorage first
     const storedTheme = localStorage.getItem('theme') as Theme | null;
-    return storedTheme || 'light';
+    if (storedTheme) return storedTheme;
+
+    // If no storage, check user system preference
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return prefersDark ? 'dark' : 'light';
   });
 
   useEffect(() => {
