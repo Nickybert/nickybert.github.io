@@ -3,8 +3,15 @@ import { MapPin } from 'lucide-react';
 
 const conferences = [
   {
-    before: 'Anakwue, N. (August 26-28, 2026). Panel Convenor, "Digital Citizenship, Political Belonging and Statehood in Contemporary Africa",',
-    venue:  'Forthcoming SGAS–VAD Conference 2026,',
+    before: 'Anakwue, N. (August, 2026). Panel Convenor, "Digital Citizenship, Political Belonging and Statehood in Contemporary Africa",',
+    venue:  'SGAS–VAD Conference 2026,',
+    after:  'University of Basel, Switzerland.',
+    year: '2026',
+    location: 'Basel, Switzerland',
+  },
+  {
+    before: 'Anakwue, N. (August, 2026). Panel Co-Convenor and Discussant, "Insider Outsider Tensions in the Field: Researching Africa and African Communities from Diasporic and Hybrid Positionalities",',
+    venue:  'SGAS–VAD Conference 2026,',
     after:  'University of Basel, Switzerland.',
     year: '2026',
     location: 'Basel, Switzerland',
