@@ -10,7 +10,7 @@ const KofiButton = () => {
       aria-label="Support me on Ko-fi"
     >
       <Coffee className="h-4 w-4" />
-      <span className="uppercase tracking-widest text-xs">Buy me a matcha</span>
+      <span className="uppercase tracking-widest text-xs">Buy me a coffee</span>
     </a>
   );
 };
