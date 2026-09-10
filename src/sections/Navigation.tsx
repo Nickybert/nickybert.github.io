@@ -1,3 +1,4 @@
+import ThemeToggle from '../components/ThemeToggle';
 import { useState, useEffect, useCallback } from 'react';
 import { Menu, X } from 'lucide-react';
 import { PERSONAL_INFO } from '../config';
