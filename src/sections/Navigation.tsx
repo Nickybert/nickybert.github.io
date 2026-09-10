@@ -63,27 +63,35 @@ const Navigation = () => {
             {PERSONAL_INFO.name}
           </button>
 
-          {/* Desktop links */}
-          <div className="hidden md:flex items-center gap-7">
-            {navLinks.map((link) => (
-              <button
-                key={link.label}
-                onClick={() => scrollTo(link.href)}
-                className={`nav-link ${activeSection === link.href.slice(1) ? 'active' : ''}`}
-              >
-                {link.label}
-              </button>
-            ))}
+          {/* Right-side Container: Groups the links, toggle, and hamburger menu */}
+          <div className="flex items-center gap-3 md:gap-7">
+            
+            {/* Desktop links */}
+            <div className="hidden md:flex items-center gap-7">
+              {navLinks.map((link) => (
+                <button
+                  key={link.label}
+                  onClick={() => scrollTo(link.href)}
+                  className={`nav-link ${activeSection === link.href.slice(1) ? 'active' : ''}`}
+                >
+                  {link.label}
+                </button>
+              ))}
+            </div>
+
+            {/* Theme Toggle: Visible on both mobile and desktop */}
+            <ThemeToggle />
+
+            {/* Mobile toggle (Hamburger Menu) */}
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="md:hidden p-1 text-foreground"
+              aria-label="Toggle menu"
+            >
+              {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
           </div>
 
-          {/* Mobile toggle */}
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-1 text-foreground"
-            aria-label="Toggle menu"
-          >
-            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
-          </button>
         </div>
       </nav>
 
