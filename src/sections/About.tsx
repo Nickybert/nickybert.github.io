@@ -1,5 +1,3 @@
-import React from 'react';
-
 const About = () => {
   return (
     <section id="about" className="relative w-full min-h-[80vh] section-light overflow-hidden z-20 py-[7vh] lg:py-[9vh] transition-colors duration-300">
@@ -46,7 +44,7 @@ const About = () => {
               and writing investment memos for seed-stage ventures. 
               I’m a DreamVC LIVC Fellow, a former Venture Partner at Republic, 
               a Pitch Champion at the London Venture Crawl, 
-              and the winner of Queen Mary's 3-Minute Thesis competition at both faculty and university levels.
+              and the winner of Queen Mary&rsquo;s 3-Minute Thesis competition at both faculty and university levels.
               I am also published in top peer-reviewed journals and edited volumes from Routledge and Palgrave Macmillan, and have a paper under review at <em>Contention</em>.
               I have also presented my research at and convened panels in digital politics at conferences and seminars at the LSE, QMUL, University of Basel, Oxford, AFPP Manchester, and the African Studies Association's Annual Meeting in the US, 
               and have also peer-reviewed for five top-tier academic journals. 
