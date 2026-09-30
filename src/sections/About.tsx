@@ -1,67 +1,70 @@
-const About = () => (
-  <section id="about" className="relative w-full min-h-[80vh] bg-[#F4F6F8] overflow-hidden z-20 py-[7vh] lg:py-[9vh]">
-    <div className="w-full h-full px-4 sm:px-6 lg:px-[6vw] flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-[4vw]">
+import React from 'react';
 
-     <div className="animate-slide-left w-[65vw] sm:w-[48vw] lg:w-[38vw] h-[40vh] lg:h-[65vh] shrink-0 flex items-center justify-center">
-        <img 
-          src="/network-globe.jpg.png" 
-          alt="Digital Network Concept" 
-          className="w-full h-full object-contain rounded-2xl drop-shadow-2xl scale-[1.15] transition-transform duration-700 hover:scale-[1.18]"
-        />
-      </div>
-      
-      {/*Div container with my bio*/}
-      <div className="animate-slide-right w-full lg:w-[52vw] max-w-2xl">
-        <div className="section-label">About</div>
-        <h2 className="text-[clamp(22px,2.2vw,30px)] font-semibold text-[#0B0D10] mb-5">
-          Digital Politics &amp; Social Movements Researcher
-        </h2>
+const About = () => {
+  return (
+    <section id="about" className="relative w-full min-h-[80vh] section-light overflow-hidden z-20 py-[7vh] lg:py-[9vh] transition-colors duration-300">
+      <div className="w-full h-full px-4 sm:px-6 lg:px-[6vw] flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-[4vw]">
 
-        <div className="space-y-4 text-[15px] lg:text-[15.5px] leading-[1.75] text-[#0B0D10]/80">
-          <p>
-            I am a recipient of the{' '}
-            <a href="https://liss-dtp.ac.uk/students/nicholas-anakwue/" target="_blank" rel="noopener noreferrer" className="text-link font-medium">
-              2023 LISS DTP Studentship and International Doctoral Scholar Award
-            </a>
-            , by the Economic and Social Research Council (ESRC) / UK Research and Innovation (UKRI).
-          </p>
-          <p>
-            My research sits at the intersection of computational social science, African digital politics, 
-            and technology governance — a convergence that makes me equally credible in academic research, product strategy and policy analysis rooms.
-          </p>
-          <p>
-            As an ESRC-funded PhD candidate at Queen Mary University of London, 
-            I analyse large-scale social networks to understand how protest movements in Africa, 
-            particularly in Nigeria and Zimbabwe, mobilise collective political identity through digital platforms. 
-            My methods rigorously utilise Exponential Random Graph Models, Dynamic Network Actor Models, 
-            in-depth qualitative interviews across five actor strata, and original 5-month fieldwork insights conducted in Nigeria. 
-            My theoretical contribution extends connective action theory through the lens of network architecture to a logic of collection, 
-            showing how the structural shapes of digital conversation either concentrate or distribute political agency in social movements.
-          </p>
-          <p>
-            Before academia, I spent years designing and executing growth strategies for African tech startups in civictech, media and e-commerce, 
-            and writing investment memos for seed-stage ventures. 
-            I’m a DreamVC LIVC Fellow, a former Venture Partner at Republic, 
-            a Pitch Champion at the London Venture Crawl, 
-            and the winner of Queen Mary's 3-Minute Thesis competition at both faculty and university levels.
-            I am also published in top peer-reviewed journals and edited volumes from Routledge and Palgrave Macmillan, and have a paper under review at <em>Contention</em>.
-            I have also presented my research at and convened panels in digital politics at conferences and seminars at the LSE, QMUL, University of Basel, Oxford, AFPP Manchester, and the African Studies Association's Annual Meeting in the US, 
-            and have also peer-reviewed for five top-tier academic journals. 
-          </p>
-        </div>
+        <div className="animate-slide-left w-[65vw] sm:w-[48vw] lg:w-[38vw] h-[40vh] lg:h-[65vh] shrink-0 flex items-center justify-center">
+          <img 
+            src="/network-globe.jpg.png" 
+            alt="Digital Network Concept" 
+            className="w-full h-full object-contain rounded-2xl drop-shadow-2xl scale-[1.15] transition-transform duration-700 hover:scale-[1.18]"
+          />
+        </div>
+        
+        <div className="animate-slide-right w-full lg:w-[52vw] max-w-2xl">
+          <div className="section-label">About</div>
+          
+          <h2 className="text-[clamp(22px,2.2vw,30px)] font-semibold text-foreground transition-colors duration-300 mb-5">
+            Digital Politics &amp; Social Movements Researcher
+          </h2>
 
-        {/* Keywords */}
-        <div className="animate-on-scroll delay-2 mt-6 flex flex-wrap gap-2">
-          {['#EndSARS', '#ThisFlag', 'Network Analysis', 'Connective Action', 'ERGM', 'Twitter', 'DyNAM'].map((tag) => (
-            <span key={tag} className="font-mono text-[0.6rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-full border border-[#0B0D10]/12 text-[#0B0D10]/60 bg-white">
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div>
+          <div className="space-y-4 text-[15px] lg:text-[15.5px] leading-[1.75] text-foreground/80 transition-colors duration-300">
+            <p>
+              I am a recipient of the{' '}
+              <a href="https://liss-dtp.ac.uk/students/nicholas-anakwue/" target="_blank" rel="noopener noreferrer" className="text-link font-medium">
+                2023 LISS DTP Studentship and International Doctoral Scholar Award
+              </a>
+              , by the Economic and Social Research Council (ESRC) / UK Research and Innovation (UKRI).
+            </p>
+            <p>
+              My research sits at the intersection of computational social science, African digital politics, 
+              and technology governance — a convergence that makes me equally credible in academic research, product strategy and policy analysis rooms.
+            </p>
+            <p>
+              As an ESRC-funded PhD candidate at Queen Mary University of London, 
+              I analyse large-scale social networks to understand how protest movements in Africa, 
+              particularly in Nigeria and Zimbabwe, mobilise collective political identity through digital platforms. 
+              My methods rigorously utilise Exponential Random Graph Models, Dynamic Network Actor Models, 
+              in-depth qualitative interviews across five actor strata, and original 5-month fieldwork insights conducted in Nigeria. 
+              My theoretical contribution extends connective action theory through the lens of network architecture to a logic of collection, 
+              showing how the structural shapes of digital conversation either concentrate or distribute political agency in social movements.
+            </p>
+            <p>
+              Before academia, I spent years designing and executing growth strategies for African tech startups in civictech, media and e-commerce, 
+              and writing investment memos for seed-stage ventures. 
+              I’m a DreamVC LIVC Fellow, a former Venture Partner at Republic, 
+              a Pitch Champion at the London Venture Crawl, 
+              and the winner of Queen Mary's 3-Minute Thesis competition at both faculty and university levels.
+              I am also published in top peer-reviewed journals and edited volumes from Routledge and Palgrave Macmillan, and have a paper under review at <em>Contention</em>.
+              I have also presented my research at and convened panels in digital politics at conferences and seminars at the LSE, QMUL, University of Basel, Oxford, AFPP Manchester, and the African Studies Association's Annual Meeting in the US, 
+              and have also peer-reviewed for five top-tier academic journals. 
+            </p>
+          </div>
 
-    </div>
-  </section>
-);
+          <div className="animate-on-scroll delay-2 mt-6 flex flex-wrap gap-2">
+            {['#EndSARS', '#ThisFlag', 'Network Analysis', 'Connective Action', 'ERGM', 'Twitter', 'DyNAM'].map((tag) => (
+              <span key={tag} className="font-mono text-[0.6rem] tracking-[0.1em] uppercase px-2.5 py-1 rounded-full border border-border text-muted-foreground bg-card transition-colors duration-300">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+};
 
 export default About;
