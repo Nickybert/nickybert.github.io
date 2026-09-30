@@ -102,17 +102,15 @@ const Conferences = () => {
         }
       `}</style>
 
-      <section className="relative w-full bg-[#F4F6F8] py-[6vh] lg:py-[8vh] z-40">
+      <section className="relative w-full section-light py-[6vh] lg:py-[8vh] z-40 transition-colors duration-300">
         <div className="w-full px-4 sm:px-6 lg:px-[6vw]">
           <div className="section-label animate-slide-left">Conferences</div>
-          <h2 className="animate-slide-left text-[clamp(24px,2.6vw,36px)] font-semibold text-[#0B0D10] mb-8">
+          <h2 className="animate-slide-left text-[clamp(24px,2.6vw,36px)] font-semibold text-foreground mb-8 transition-colors duration-300">
             Conferences &amp; Workshops
           </h2>
 
-          {/* Timeline layout */}
           <div className="max-w-4xl relative">
-            {/* Vertical timeline line */}
-            <div className="absolute left-[2.35rem] top-0 bottom-0 w-[1px] bg-[#0B0D10]/08 hidden sm:block" />
+            <div className="absolute left-[2.35rem] top-0 bottom-0 w-[1px] bg-border hidden sm:block transition-colors duration-300" />
 
             <div className="space-y-5" ref={listRef}>
               {conferences.map((conf, i) => (
@@ -121,26 +119,23 @@ const Conferences = () => {
                   className="conf-item flex items-start gap-4 sm:gap-6"
                   style={{ transitionDelay: `${i * 55}ms` }}
                 >
-                  {/* Year badge */}
                   <div className="shrink-0 flex flex-col items-center gap-1 hidden sm:flex">
                     <span className="font-mono text-[0.6rem] tracking-[0.1em] text-[#C8332E] bg-[#C8332E]/8 px-1.5 py-0.5 rounded z-10">
                       {conf.year}
                     </span>
-                    <div className="w-1.5 h-1.5 rounded-full border-2 border-[#C8332E] bg-[#F4F6F8] z-10" />
+                    <div className="w-1.5 h-1.5 rounded-full border-2 border-[#C8332E] bg-background z-10 transition-colors duration-300" />
                   </div>
 
-                  {/* Card */}
                   <div className="card-base flex-1">
-                    {/* Mobile year */}
                     <div className="flex items-center gap-2 mb-2 sm:hidden">
                       <span className="font-mono text-[0.58rem] tracking-[0.12em] uppercase text-[#C8332E]">
                         {conf.year}
                       </span>
                     </div>
-                    <p className="text-[14px] text-[#0B0D10]/80 leading-relaxed mb-2">
+                    <p className="text-[14px] text-foreground/80 leading-relaxed mb-2 transition-colors duration-300">
                     {conf.before} <em>{conf.venue}</em> {conf.after}
                     </p>
-                    <div className="flex items-center gap-1.5 text-[#0B0D10]/35">
+                    <div className="flex items-center gap-1.5 text-muted-foreground transition-colors duration-300">
                       <MapPin size={11} />
                       <span className="font-mono text-[0.58rem] tracking-[0.08em]">
                         {conf.location}
