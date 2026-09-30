@@ -1,12 +1,12 @@
 import { FileText, FlaskConical, BookOpen } from 'lucide-react';
 
+// bg-[#F4F6F8] with section-light
 const Research = () => (
-  {/* bg-[#F4F6F8] with section-light */}
   <section id="research" className="relative w-full section-light py-[6vh] lg:py-[8vh] z-40 transition-colors duration-300">
     <div className="w-full px-4 sm:px-6 lg:px-[6vw]">
 
       <div className="section-label animate-slide-left">Research &amp; Teaching</div>
-      
+
       {/* text-[#0B0D10] with text-foreground */}
       <h2 className="animate-slide-left text-[clamp(24px,2.6vw,36px)] font-semibold text-foreground transition-colors duration-300 mb-8">
         Research &amp; Teaching
@@ -14,11 +14,11 @@ const Research = () => (
 
       {/* CV link */}
       <div className="animate-on-scroll mb-8">
+        {/* bg-white with bg-card, text-[#0B0D10] with text-foreground, and border-[#0B0D10]/10 with border-border */}
         <a
           href="https://drive.google.com/file/d/14vxkJUvja2bGCLV_SH-O2jWUqAhuAA6I/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
-          {/* bg-white with bg-card, text-[#0B0D10] with text-foreground, and border-[#0B0D10]/10 with border-border */}
           className="inline-flex items-center gap-2.5 bg-card rounded-lg px-4 py-2.5 text-sm font-medium text-foreground border border-border hover:border-[#C8332E] hover:text-[#C8332E] transition-all duration-300 group"
           style={{ boxShadow: '0 1px 3px rgba(0,0,0,0.06)' }}
         >
