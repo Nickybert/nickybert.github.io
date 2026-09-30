@@ -6,6 +6,11 @@ type Tab = 'publications' | 'awards' | 'talks' | 'roles';
 const data = {
   publications: [
     {
+      citation: 'Anakwue, N. (September 28, 2026). "Creative Capital, Transparency and Artificial Intelligence (AI): The UK’s Copyright Dilemma". Policy Connect.',
+      link: 'https://policyconnect.org.uk/blog/creative-capital-transparency-and-artificial-intelligence-ai-the-uks-copyright-dilemma/',
+      year: '2026',
+    },
+    {
       citation: 'Beach, M., Anakwue, N., Freeman-Jones, L. & Whalley, L. (October 25, 2024). "PGR students aren\'t hard to reach - and student staff can help". Wonkhe.',
       link: 'https://wonkhe.com/blogs-sus/pgr-students-arent-hard-to-reach-and-student-staff-can-help/',
       year: '2024',
