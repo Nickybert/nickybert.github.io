@@ -66,10 +66,10 @@ const Engagements = () => {
   const [openMobile, setOpenMobile] = useState<Tab | null>('publications');
 
   return (
-    <section id="engagements" className="relative w-full bg-[#F4F6F8] py-[6vh] lg:py-[8vh] z-40">
+    <section id="engagements" className="relative w-full section-light py-[6vh] lg:py-[8vh] z-40 transition-colors duration-300">
       <div className="w-full px-4 sm:px-6 lg:px-[6vw]">
         <div className="section-label animate-slide-left">Engagements</div>
-        <h2 className="animate-slide-left text-[clamp(24px,2.6vw,36px)] font-semibold text-[#0B0D10] mb-8">
+        <h2 className="animate-slide-left text-[clamp(24px,2.6vw,36px)] font-semibold text-foreground mb-8 transition-colors duration-300">
           Public Engagements
         </h2>
 
@@ -77,13 +77,13 @@ const Engagements = () => {
           {/* ── Desktop Tabs ────────────────────────────────── */}
           <div className="hidden sm:block">
             {/* Tab bar */}
-            <div className="flex gap-0 border-b border-[#0B0D10]/10 mb-6">
+            <div className="flex gap-0 border-b border-border mb-6 transition-colors duration-300">
               {tabLabels.map(({ key, label }) => (
                 <button
                   key={key}
                   onClick={() => setActiveTab(key)}
-                  className={`relative px-5 py-2.5 font-mono text-[0.63rem] tracking-[0.12em] uppercase transition-colors
-                    ${activeTab === key ? 'text-[#C8332E]' : 'text-[#0B0D10]/45 hover:text-[#0B0D10]/80'}`}
+                  className={`relative px-5 py-2.5 font-mono text-[0.63rem] tracking-[0.12em] uppercase transition-colors duration-300
+                    ${activeTab === key ? 'text-[#C8332E]' : 'text-foreground/45 hover:text-foreground/80'}`}
                 >
                   {label}
                   {activeTab === key && (
@@ -108,9 +108,9 @@ const Engagements = () => {
                       <span className="font-mono text-[0.58rem] tracking-[0.1em] uppercase text-[#C8332E] block mb-1.5">
                         {pub.year}
                       </span>
-                      <p className="text-[14px] text-[#0B0D10]/80 leading-relaxed">{pub.citation}</p>
+                      <p className="text-[14px] text-foreground/80 leading-relaxed transition-colors duration-300">{pub.citation}</p>
                     </div>
-                    <ExternalLink size={13} className="shrink-0 mt-1 text-[#0B0D10]/20 group-hover:text-[#C8332E] transition-colors" />
+                    <ExternalLink size={13} className="shrink-0 mt-1 text-foreground/20 group-hover:text-[#C8332E] transition-colors duration-300" />
                   </a>
                 ))}
 
@@ -118,7 +118,7 @@ const Engagements = () => {
                 data.awards.map((award, i) => (
                   <div key={i} className="card-base flex items-start gap-3">
                     <span className="mt-1.5 w-2 h-2 rounded-full bg-[#C8332E]/60 shrink-0" />
-                    <p className="text-[14px] text-[#0B0D10]/80 leading-relaxed">{award}</p>
+                    <p className="text-[14px] text-foreground/80 leading-relaxed transition-colors duration-300">{award}</p>
                   </div>
                 ))}
 
@@ -126,7 +126,7 @@ const Engagements = () => {
                 data.talks.map((talk, i) => (
                   <div key={i} className="card-base flex items-start gap-3">
                     <span className="mt-1.5 w-2 h-2 rounded-full bg-[#C8332E]/60 shrink-0" />
-                    <p className="text-[14px] text-[#0B0D10]/80 leading-relaxed">{talk}</p>
+                    <p className="text-[14px] text-foreground/80 leading-relaxed transition-colors duration-300">{talk}</p>
                   </div>
                 ))}
 
@@ -134,7 +134,7 @@ const Engagements = () => {
                 data.roles.map((role, i) => (
                   <div key={i} className="card-base flex items-start gap-3">
                     <span className="mt-1.5 w-2 h-2 rounded-full bg-[#C8332E]/60 shrink-0" />
-                    <p className="text-[14px] text-[#0B0D10]/80 leading-relaxed">{role}</p>
+                    <p className="text-[14px] text-foreground/80 leading-relaxed transition-colors duration-300">{role}</p>
                   </div>
                 ))}
             </div>
@@ -145,36 +145,36 @@ const Engagements = () => {
             {tabLabels.map(({ key, label }) => {
               const isOpen = openMobile === key;
               return (
-                <div key={key} className="bg-white rounded-lg overflow-hidden border border-[#0B0D10]/06"
+                <div key={key} className="bg-card rounded-lg overflow-hidden border border-border transition-colors duration-300"
                   style={{ boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
                   <button
                     onClick={() => setOpenMobile(isOpen ? null : key)}
                     className="w-full flex items-center justify-between px-4 py-3.5"
                   >
-                    <span className={`font-mono text-[0.63rem] tracking-[0.12em] uppercase ${isOpen ? 'text-[#C8332E]' : 'text-[#0B0D10]/70'}`}>
+                    <span className={`font-mono text-[0.63rem] tracking-[0.12em] uppercase transition-colors duration-300 ${isOpen ? 'text-[#C8332E]' : 'text-foreground/70'}`}>
                       {label}
                     </span>
                     <ChevronDown
                       size={15}
-                      className={`text-[#0B0D10]/30 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+                      className={`text-foreground/30 transition-all duration-300 ${isOpen ? 'rotate-180' : ''}`}
                     />
                   </button>
 
                   <div className={`overflow-hidden transition-all duration-400 ${isOpen ? 'max-h-[600px]' : 'max-h-0'}`}>
-                    <div className="px-4 pb-4 space-y-3 border-t border-[#0B0D10]/06 pt-3">
+                    <div className="px-4 pb-4 space-y-3 border-t border-border pt-3 transition-colors duration-300">
                       {key === 'publications' &&
                         data.publications.map((pub, i) => (
                           <a key={i} href={pub.link} target="_blank" rel="noopener noreferrer"
                             className="flex items-start gap-2 group">
                             <ExternalLink size={12} className="mt-0.5 shrink-0 text-[#C8332E]/60 group-hover:text-[#C8332E]" />
-                            <p className="text-[13px] text-[#0B0D10]/75 leading-relaxed">{pub.citation}</p>
+                            <p className="text-[13px] text-foreground/75 leading-relaxed transition-colors duration-300">{pub.citation}</p>
                           </a>
                         ))}
                       {key !== 'publications' &&
                         (data[key] as string[]).map((item, i) => (
                           <div key={i} className="flex items-start gap-2">
                             <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C8332E]/50 shrink-0" />
-                            <p className="text-[13px] text-[#0B0D10]/75 leading-relaxed">{item}</p>
+                            <p className="text-[13px] text-foreground/75 leading-relaxed transition-colors duration-300">{item}</p>
                           </div>
                         ))}
                     </div>
