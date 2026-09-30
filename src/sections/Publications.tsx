@@ -28,48 +28,49 @@ const publications: PublicationEntry[] = [
   },
 ];
 
-const Publications = () => (
-  <section id="publications" className="relative w-full bg-[#F4F6F8] py-[6vh] lg:py-[8vh] z-40">
-    <div className="w-full px-4 sm:px-6 lg:px-[6vw]">
-      <div className="section-label animate-slide-left">Journal Articles</div>
-      <h2 className="animate-slide-left text-[clamp(24px,2.6vw,36px)] font-semibold text-[#0B0D10] mb-8">
-        Journal Articles
-      </h2>
-      <div className="space-y-4 stagger-children max-w-4xl">
-        {publications.map((pub, i) => (
-          <a
-            key={i}
-            href={pub.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="card-base card-link group block"
-          >
-            <div className="flex items-start justify-between gap-4">
-              <div className="flex-1">
-                {/* Meta row */}
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="font-mono text-[0.58rem] tracking-[0.12em] uppercase text-[#C8332E]">
-                    {pub.year}
-                  </span>
-                  <span className="w-1 h-1 rounded-full bg-[#0B0D10]/20" />
-                  <span className="font-mono text-[0.58rem] tracking-[0.1em] uppercase text-[#0B0D10]/40">
-                    {pub.journal}
-                  </span>
-                </div>
-                <p className="text-[14px] text-[#0B0D10]/80 leading-relaxed mb-2">
+const Publications = () => {
+  return (
+    <section id="publications" className="relative w-full section-light py-[6vh] lg:py-[8vh] z-40 transition-colors duration-300">
+      <div className="w-full px-4 sm:px-6 lg:px-[6vw]">
+        <div className="section-label animate-slide-left">Journal Articles</div>
+        <h2 className="animate-slide-left text-[clamp(24px,2.6vw,36px)] font-semibold text-foreground mb-8 transition-colors duration-300">
+          Journal Articles
+        </h2>
+        <div className="space-y-4 stagger-children max-w-4xl">
+          {publications.map((pub, i) => (
+            <a
+              key={i}
+              href={pub.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card-base card-link group block"
+            >
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="font-mono text-[0.58rem] tracking-[0.12em] uppercase text-[#C8332E]">
+                      {pub.year}
+                    </span>
+                    <span className="w-1 h-1 rounded-full bg-foreground/20 transition-colors duration-300" />
+                    <span className="font-mono text-[0.58rem] tracking-[0.1em] uppercase text-muted-foreground transition-colors duration-300">
+                      {pub.journal}
+                    </span>
+                  </div>
+                  <p className="text-[14px] text-foreground/80 leading-relaxed mb-2 transition-colors duration-300">
                     {pub.before} <em>{pub.venue}</em> {pub.after}
-                    </p>
+                  </p>
+                </div>
+                <ExternalLink
+                  size={14}
+                  className="shrink-0 mt-1 text-foreground/20 group-hover:text-[#C8332E] transition-colors duration-300"
+                />
               </div>
-              <ExternalLink
-                size={14}
-                className="shrink-0 mt-1 text-[#0B0D10]/20 group-hover:text-[#C8332E] transition-colors"
-              />
-            </div>
-          </a>
-        ))}
+            </a>
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default Publications;
