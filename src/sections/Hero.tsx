@@ -26,15 +26,15 @@ const Hero = () => (
         {/* Sub-headline */}
         <p className="hero-subheadline text-base lg:text-lg text-muted-foreground transition-colors duration-300 mb-2 max-w-md leading-relaxed">
           {PERSONAL_INFO.title},{' '}
-          <span className="text-[#e0a35e] font-medium">{PERSONAL_INFO.institution}</span>
+          <span className="text-[#6B7280] font-medium">{PERSONAL_INFO.institution}</span>
         </p>
         <p className="hero-subheadline text-sm text-muted-foreground mb-8 max-w-md" style={{ animationDelay: '0.38s' }}>
           Digital politics · Social movements · Computational social science
         </p>
 
         {/* CTA to drive engagement to my email */}
-        <div className="hero-cta mb-8 border-l-2 border-[#e0a35e]/30 pl-4">
-          <p className="text-xs text-[#e0a35e] mb-0.5 font-mono tracking-wide uppercase">Drop me a mail</p>
+        <div className="hero-cta mb-8 border-l-2 border-[#0D0F14]/30 pl-4">
+          <p className="text-xs text-[#0D0F14] mb-0.5 font-mono tracking-wide uppercase">Drop me a mail</p>
           <a
             href={`mailto:${PERSONAL_INFO.email}`}
             className="text-sm text-foreground font-medium text-link"
