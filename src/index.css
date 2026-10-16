@@ -19,15 +19,15 @@
     --secondary-foreground: 220 20% 6%;
     --muted: 220 14% 93%;
     --muted-foreground: 220 9% 46%;
-    --accent: 0 68% 54%;
+    --accent: 32 69% 62%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 220 13% 88%;
     --input: 220 13% 88%;
-    --ring: 0 68% 54%;
+    --ring: 32 69% 62%;
     --radius: 0.625rem;
-    --clr-red: #C8332E;
+    --clr-red: #e0a35e;
     --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 
     /* variables for specific elements that had hardcoded hex colors */
@@ -58,18 +58,18 @@
     --secondary-foreground: 220 10% 90%;
     --muted: 220 15% 16%;      
     --muted-foreground: 220 10% 65%;
-    --accent: 0 68% 54%;
+    --accent: 32 69% 62%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%; 
     --destructive-foreground: 0 0% 98%;
     --border: 220 15% 20%;    
     --input: 220 15% 20%;
-    --ring: 0 68% 54%;
+    --ring: 32 69% 62%;
 
     --scrollbar-track: #1A1D21;   
     --scrollbar-thumb: #444950;  
     --scrollbar-thumb-hover: #606770;
-    --selection-bg: rgba(200,51,46,0.25); 
+    --selection-bg: rgba(224, 163, 94, 0.25); 
     --selection-text: #F4F6F8;  
     --nav-link-color: #F4F6F8;   
     --card-bg-override: var(--card); 
