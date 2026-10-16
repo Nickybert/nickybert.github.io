@@ -29,7 +29,7 @@ class Particle {
     const alpha = this.life / this.maxLife;
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(200, 51, 46, ${alpha})`;
+    ctx.fillStyle = `rgba(224, 163, 94, ${alpha})`;
     ctx.fill();
   }
 }
@@ -82,7 +82,7 @@ const CursorNetwork = () => {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(200, 51, 46, ${alpha * 0.4})`;
+            ctx.strokeStyle = `rgba(224, 163, 94, ${alpha * 0.4})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }
