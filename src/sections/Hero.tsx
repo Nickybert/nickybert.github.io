@@ -70,7 +70,7 @@ const Hero = () => (
             className="w-full h-full object-cover"
           />
           {/* Subtle red corner accent for my cards */}
-          <span className="absolute bottom-0 right-0 w-16 h-16 bg-[#C8332E]/10 pointer-events-none" />
+          <span className="absolute bottom-0 right-0 w-16 h-16 bg-[#e0a35e]/10 pointer-events-none" />
         </div>
       </div>
 

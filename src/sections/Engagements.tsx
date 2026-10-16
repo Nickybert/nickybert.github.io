@@ -83,11 +83,11 @@ const Engagements = () => {
                   key={key}
                   onClick={() => setActiveTab(key)}
                   className={`relative px-5 py-2.5 font-mono text-[0.63rem] tracking-[0.12em] uppercase transition-colors duration-300
-                    ${activeTab === key ? 'text-[#C8332E]' : 'text-foreground/45 hover:text-foreground/80'}`}
+                    ${activeTab === key ? 'text-[#e0a35e]' : 'text-foreground/45 hover:text-foreground/80'}`}
                 >
                   {label}
                   {activeTab === key && (
-                    <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#C8332E] rounded-t-sm" />
+                    <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#e0a35e] rounded-t-sm" />
                   )}
                 </button>
               ))}
@@ -105,19 +105,19 @@ const Engagements = () => {
                     className="card-base card-link group flex items-start justify-between gap-4"
                   >
                     <div className="flex-1">
-                      <span className="font-mono text-[0.58rem] tracking-[0.1em] uppercase text-[#C8332E] block mb-1.5">
+                      <span className="font-mono text-[0.58rem] tracking-[0.1em] uppercase text-[#e0a35e] block mb-1.5">
                         {pub.year}
                       </span>
                       <p className="text-[14px] text-foreground/80 leading-relaxed transition-colors duration-300">{pub.citation}</p>
                     </div>
-                    <ExternalLink size={13} className="shrink-0 mt-1 text-foreground/20 group-hover:text-[#C8332E] transition-colors duration-300" />
+                    <ExternalLink size={13} className="shrink-0 mt-1 text-foreground/20 group-hover:text-[#e0a35e] transition-colors duration-300" />
                   </a>
                 ))}
 
               {activeTab === 'awards' &&
                 data.awards.map((award, i) => (
                   <div key={i} className="card-base flex items-start gap-3">
-                    <span className="mt-1.5 w-2 h-2 rounded-full bg-[#C8332E]/60 shrink-0" />
+                    <span className="mt-1.5 w-2 h-2 rounded-full bg-[#e0a35e]/60 shrink-0" />
                     <p className="text-[14px] text-foreground/80 leading-relaxed transition-colors duration-300">{award}</p>
                   </div>
                 ))}
@@ -125,7 +125,7 @@ const Engagements = () => {
               {activeTab === 'talks' &&
                 data.talks.map((talk, i) => (
                   <div key={i} className="card-base flex items-start gap-3">
-                    <span className="mt-1.5 w-2 h-2 rounded-full bg-[#C8332E]/60 shrink-0" />
+                    <span className="mt-1.5 w-2 h-2 rounded-full bg-[#e0a35e]/60 shrink-0" />
                     <p className="text-[14px] text-foreground/80 leading-relaxed transition-colors duration-300">{talk}</p>
                   </div>
                 ))}
@@ -133,7 +133,7 @@ const Engagements = () => {
               {activeTab === 'roles' &&
                 data.roles.map((role, i) => (
                   <div key={i} className="card-base flex items-start gap-3">
-                    <span className="mt-1.5 w-2 h-2 rounded-full bg-[#C8332E]/60 shrink-0" />
+                    <span className="mt-1.5 w-2 h-2 rounded-full bg-[#e0a35e]/60 shrink-0" />
                     <p className="text-[14px] text-foreground/80 leading-relaxed transition-colors duration-300">{role}</p>
                   </div>
                 ))}
@@ -151,7 +151,7 @@ const Engagements = () => {
                     onClick={() => setOpenMobile(isOpen ? null : key)}
                     className="w-full flex items-center justify-between px-4 py-3.5"
                   >
-                    <span className={`font-mono text-[0.63rem] tracking-[0.12em] uppercase transition-colors duration-300 ${isOpen ? 'text-[#C8332E]' : 'text-foreground/70'}`}>
+                    <span className={`font-mono text-[0.63rem] tracking-[0.12em] uppercase transition-colors duration-300 ${isOpen ? 'text-[#e0a35e]' : 'text-foreground/70'}`}>
                       {label}
                     </span>
                     <ChevronDown
@@ -166,14 +166,14 @@ const Engagements = () => {
                         data.publications.map((pub, i) => (
                           <a key={i} href={pub.link} target="_blank" rel="noopener noreferrer"
                             className="flex items-start gap-2 group">
-                            <ExternalLink size={12} className="mt-0.5 shrink-0 text-[#C8332E]/60 group-hover:text-[#C8332E]" />
+                            <ExternalLink size={12} className="mt-0.5 shrink-0 text-[#e0a35e]/60 group-hover:text-[#e0a35e]" />
                             <p className="text-[13px] text-foreground/75 leading-relaxed transition-colors duration-300">{pub.citation}</p>
                           </a>
                         ))}
                       {key !== 'publications' &&
                         (data[key] as string[]).map((item, i) => (
                           <div key={i} className="flex items-start gap-2">
-                            <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C8332E]/50 shrink-0" />
+                            <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#e0a35e]/50 shrink-0" />
                             <p className="text-[13px] text-foreground/75 leading-relaxed transition-colors duration-300">{item}</p>
                           </div>
                         ))}

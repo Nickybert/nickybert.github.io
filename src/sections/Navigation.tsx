@@ -58,7 +58,7 @@ const Navigation = () => {
           {/* Logo */}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="font-mono text-[0.6rem] tracking-[0.14em] uppercase text-foreground hover:text-[#C8332E] transition-colors"
+            className="font-mono text-[0.6rem] tracking-[0.14em] uppercase text-foreground hover:text-[#e0a35e] transition-colors"
           >
             {PERSONAL_INFO.name}
           </button>
@@ -116,7 +116,7 @@ const Navigation = () => {
             <button
               key={link.label}
               onClick={() => scrollTo(link.href)}
-              className="font-display text-[clamp(28px,8vw,48px)] font-semibold text-foreground hover:text-[#C8332E] transition-colors"
+              className="font-display text-[clamp(28px,8vw,48px)] font-semibold text-foreground hover:text-[#e0a35e] transition-colors"
               style={{
                 fontFamily: "'Playfair Display', Georgia, serif",
                 transitionDelay: mobileOpen ? `${i * 0.05}s` : '0s',

@@ -120,15 +120,15 @@ const Conferences = () => {
                   style={{ transitionDelay: `${i * 55}ms` }}
                 >
                   <div className="shrink-0 flex flex-col items-center gap-1 hidden sm:flex">
-                    <span className="font-mono text-[0.6rem] tracking-[0.1em] text-[#C8332E] bg-[#C8332E]/8 px-1.5 py-0.5 rounded z-10">
+                    <span className="font-mono text-[0.6rem] tracking-[0.1em] text-[#e0a35e] bg-[#e0a35e]/8 px-1.5 py-0.5 rounded z-10">
                       {conf.year}
                     </span>
-                    <div className="w-1.5 h-1.5 rounded-full border-2 border-[#C8332E] bg-background z-10 transition-colors duration-300" />
+                    <div className="w-1.5 h-1.5 rounded-full border-2 border-[#e0a35e] bg-background z-10 transition-colors duration-300" />
                   </div>
 
                   <div className="card-base flex-1">
                     <div className="flex items-center gap-2 mb-2 sm:hidden">
-                      <span className="font-mono text-[0.58rem] tracking-[0.12em] uppercase text-[#C8332E]">
+                      <span className="font-mono text-[0.58rem] tracking-[0.12em] uppercase text-[#e0a35e]">
                         {conf.year}
                       </span>
                     </div>

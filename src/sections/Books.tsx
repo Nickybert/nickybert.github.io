@@ -68,7 +68,7 @@ const Books = () => {
               <div className="flex items-start justify-between gap-4">
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="font-mono text-[0.58rem] tracking-[0.12em] uppercase text-[#C8332E]">
+                    <span className="font-mono text-[0.58rem] tracking-[0.12em] uppercase text-[#e0a35e]">
                       {book.year}
                     </span>
                     <span className="w-1 h-1 rounded-full bg-foreground/20 transition-colors duration-300" />
@@ -82,7 +82,7 @@ const Books = () => {
                 </div>
                 <ExternalLink
                   size={14}
-                  className="shrink-0 mt-1 text-foreground/20 group-hover:text-[#C8332E] transition-colors duration-300"
+                  className="shrink-0 mt-1 text-foreground/20 group-hover:text-[#e0a35e] transition-colors duration-300"
                 />
               </div>
             </a>

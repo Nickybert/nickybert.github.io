@@ -11,15 +11,15 @@ const socialLinks = [
 const Contact = () => (
   <section id="contact" className="relative w-full bg-[#0B0D10] py-[7vh] lg:py-[9vh] z-50 overflow-hidden">
     {/* Background accent */}
-    <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#C8332E]/35 to-transparent" />
-    <div className="absolute -bottom-40 -right-40 w-72 h-72 rounded-full bg-[#C8332E]/5 blur-3xl pointer-events-none" />
+    <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#e0a35e]/35 to-transparent" />
+    <div className="absolute -bottom-40 -right-40 w-72 h-72 rounded-full bg-[#e0a35e]/5 blur-3xl pointer-events-none" />
 
     <div className="w-full px-4 sm:px-6 lg:px-[6vw]">
       <div className="max-w-2xl">
         {/* Label */}
         <div className="animate-on-scroll mb-4 flex items-center gap-2">
-          <span className="font-mono text-[0.6rem] tracking-[0.14em] uppercase text-[#C8332E]">Contact me</span>
-          <span className="w-6 h-[1px] bg-[#C8332E]/40" />
+          <span className="font-mono text-[0.6rem] tracking-[0.14em] uppercase text-[#e0a35e]">Contact me</span>
+          <span className="w-6 h-[1px] bg-[#e0a35e]/40" />
         </div>
 
         <h2 className="animate-on-scroll text-[clamp(32px,4vw,52px)] font-semibold text-[#F4F6F8] mb-6 leading-[1.1]">
@@ -35,12 +35,12 @@ const Contact = () => (
           {/* Email CTA */}
           <a
             href={`mailto:${PERSONAL_INFO.email}`}
-            className="group inline-flex items-center gap-3 text-[#F4F6F8] hover:text-[#C8332E] transition-colors duration-300 mb-8"
+            className="group inline-flex items-center gap-3 text-[#F4F6F8] hover:text-[#e0a35e] transition-colors duration-300 mb-8"
           >
-            <span className="w-8 h-8 flex items-center justify-center rounded-full border border-[#F4F6F8]/15 group-hover:border-[#C8332E] group-hover:bg-[#C8332E] transition-all duration-300">
+            <span className="w-8 h-8 flex items-center justify-center rounded-full border border-[#F4F6F8]/15 group-hover:border-[#e0a35e] group-hover:bg-[#e0a35e] transition-all duration-300">
               <Mail size={14} />
             </span>
-            <span className="text-sm font-medium border-b border-[#F4F6F8]/15 group-hover:border-[#C8332E] pb-0.5 transition-colors">
+            <span className="text-sm font-medium border-b border-[#F4F6F8]/15 group-hover:border-[#e0a35e] pb-0.5 transition-colors">
               {PERSONAL_INFO.email}
             </span>
           </a>
