@@ -26,7 +26,7 @@ const Hero = () => (
         {/* Sub-headline */}
         <p className="hero-subheadline text-base lg:text-lg text-muted-foreground transition-colors duration-300 mb-2 max-w-md leading-relaxed">
           {PERSONAL_INFO.title},{' '}
-          <span className="text-[#C8332E] font-medium">{PERSONAL_INFO.institution}</span>
+          <span className="text-[#e0a35e] font-medium">{PERSONAL_INFO.institution}</span>
         </p>
         <p className="hero-subheadline text-sm text-muted-foreground mb-8 max-w-md" style={{ animationDelay: '0.38s' }}>
           Digital politics · Social movements · Computational social science
