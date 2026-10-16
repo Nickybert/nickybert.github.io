@@ -33,8 +33,8 @@ const Hero = () => (
         </p>
 
         {/* CTA to drive engagement to my email */}
-        <div className="hero-cta mb-8 border-l-2 border-[#C8332E]/30 pl-4">
-          <p className="text-xs text-[#6B7280] mb-0.5 font-mono tracking-wide uppercase">Drop me a mail</p>
+        <div className="hero-cta mb-8 border-l-2 border-[#e0a35e]/30 pl-4">
+          <p className="text-xs text-[#e0a35e] mb-0.5 font-mono tracking-wide uppercase">Drop me a mail</p>
           <a
             href={`mailto:${PERSONAL_INFO.email}`}
             className="text-sm text-foreground font-medium text-link"
