@@ -206,9 +206,21 @@
 .stagger-children.animate-in > *:nth-child(6) { transition-delay: 0.40s;  opacity: 1; transform: translateY(0); }
 
 /* ── Hero ─────────────────────────────────────────────── */
-@keyframes heroWordUp {
-  from { opacity: 0; transform: translateY(48px) skewY(2deg); clip-path: inset(0 0 100% 0); }
-  to   { opacity: 1; transform: translateY(0) skewY(0);       clip-path: inset(0 0 0% 0); }
+@keyframes heroBurst {
+  0% { 
+    opacity: 0; 
+    transform: scale(0.85) translateY(20px); 
+    filter: blur(8px); 
+  }
+  60% { 
+    opacity: 1; 
+    transform: scale(1.02) translateY(-2px); 
+    filter: blur(0); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: scale(1) translateY(0); 
+  }
 }
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(18px); }
@@ -219,12 +231,12 @@
   to   { opacity: 1; transform: translateX(0); }
 }
 
-.hero-word { display: block; overflow: hidden; }
+.hero-word { display: block; overflow: visible; }
 .hero-word > span {
   display: block;
-  animation: heroWordUp 0.95s cubic-bezier(0.16,1,0.3,1) both;
+  animation: heroBurst 0.8s cubic-bezier(0.16,1,0.3,1) both;
 }
-.hero-word:nth-child(2) > span { animation-delay: 0.1s; }
+.hero-word:nth-child(2) > span { animation-delay: 0.15s; }
 
 .hero-subheadline { animation: fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.32s both; }
 .hero-cta          { animation: fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.44s both; }
