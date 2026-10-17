@@ -13,20 +13,19 @@ const Quote = () => (
           </span>
           <p className="text-[clamp(17px,1.9vw,22px)] font-normal leading-[1.6] text-[#F4F6F8]/90 mt-1"
             style={{ fontFamily: "'Playfair Display', Georgia, serif", fontStyle: 'italic' }}>
-            One practicable aim of justice as fairness is to provide an acceptable
-            philosophical and moral basis for democratic institutions.
+            Violent protests tend to accompany, complement, and extend organized, peaceful attempts by the same people to accomplish their objectives.
           </p>
         </div>
 
         <div className="flex items-center gap-4 shrink-0">
           <div className="w-[64px] h-[64px] lg:w-[76px] lg:h-[76px] rounded-full overflow-hidden border-2 border-[#e0a35e]/30 img-zoom">
-            <img src={RAWLS_IMAGE} alt="John Rawls" className="w-full h-full object-cover grayscale" />
+            <img src={RAWLS_IMAGE} alt="Charles Tilly" className="w-full h-full object-cover grayscale" />
           </div>
           <div>
             <p className="font-mono text-[0.6rem] tracking-[0.14em] uppercase text-[#F4F6F8]/50 mb-0.5">
-              &mdash; John Rawls
+              &mdash; Charles Tilly
             </p>
-            <p className="text-xs text-[#F4F6F8]/35">Political Philosopher</p>
+            <p className="text-xs text-[#F4F6F8]/35">Political Sociologist</p>
           </div>
         </div>
 

@@ -226,7 +226,7 @@
   /* steps(12) matches the rough character count. Adjust if it feels too smooth or too choppy */
   animation: heroTypewriter 0.6s steps(12, end) forwards;
 }
-/* Delay the second word so it types after the first */
+/* Delaying the second word so it types after the first */
 .hero-word:nth-child(2) > span { animation-delay: 0.6s; }
 
 /* Adjusted delays so elements fade in as the typing finishes */
