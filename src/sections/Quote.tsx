@@ -1,4 +1,4 @@
-import { RAWLS_IMAGE } from '../config';
+import { TILLY_IMAGE } from '../config';
 
 const Quote = () => (
   <section className="relative w-full bg-[#0B0D10] overflow-hidden z-30 py-[7vh] lg:py-[9vh]">
