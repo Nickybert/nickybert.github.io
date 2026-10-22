@@ -223,7 +223,7 @@
 .hero-word > span {
   display: block;
   opacity: 0; 
-  /* steps(12) matches the rough character count. Adjust if it feels too smooth or too choppy */
+  
   animation: heroTypewriter 0.6s steps(12, end) forwards;
 }
 /* Delaying the second word so it types after the first */
