@@ -19,7 +19,7 @@ const Quote = () => (
 
         <div className="flex items-center gap-4 shrink-0">
           <div className="w-[64px] h-[64px] lg:w-[76px] lg:h-[76px] rounded-full overflow-hidden border-2 border-[#e0a35e]/30 img-zoom">
-            <img src={RAWLS_IMAGE} alt="Charles Tilly" className="w-full h-full object-cover grayscale" />
+            <img src={TILLY_IMAGE} alt="Charles Tilly" className="w-full h-full object-cover grayscale" />
           </div>
           <div>
             <p className="font-mono text-[0.6rem] tracking-[0.14em] uppercase text-[#F4F6F8]/50 mb-0.5">

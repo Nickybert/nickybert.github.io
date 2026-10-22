@@ -9,7 +9,7 @@ export const HERO_IMAGE = "./images/hero_portrait_new.png";
 export const AFRICA_IMAGE = "./images/africa.png";
 
 // QUOTE SECTION IMAGE
-export const RAWLS_IMAGE = "./images/rawls_portrait_new.jpg";
+export const TILLY_IMAGE = "./images/charlestilly.jpg";
 
 // PERSONAL INFO
 export const PERSONAL_INFO = {
