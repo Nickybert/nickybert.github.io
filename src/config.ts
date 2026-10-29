@@ -3,7 +3,7 @@
 // ============================================
 
 // HERO SECTION IMAGE
-export const HERO_IMAGE = "./images/hero_portrait_new.png";
+export const HERO_IMAGE = "./images/hero_portrait_new_2.png";
 
 // ABOUT SECTION IMAGE (Updated image)
 export const AFRICA_IMAGE = "./images/africa.png";
