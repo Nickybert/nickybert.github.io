@@ -36,7 +36,7 @@ const About = () => {
               particularly in Nigeria and Zimbabwe, mobilise collective political identity through digital platforms. 
               My methods rigorously utilise Exponential Random Graph Models, Dynamic Network Actor Models, 
               in-depth qualitative interviews across five actor strata, and original 5-month fieldwork insights conducted in Nigeria. 
-              My theoretical contribution extends connective action theory through the lens of network architecture to a logic of collection, 
+              My theoretical contribution extends connective action theory through the lens of network architecture to a logic of collection (theorised by Gerbaudo, 2024), 
               showing how the structural shapes of digital conversation either concentrate or distribute political agency in social movements.
             </p>
             <p>
