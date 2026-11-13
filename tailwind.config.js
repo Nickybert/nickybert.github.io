@@ -49,12 +49,13 @@ module.exports = {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
-      
+
       fontFamily: {
         sans: ['"Inter"', 'sans-serif'],
-        serif: ['"Playfair Display"', 'serif'],
+        serif: ['"Newsreader"', 'serif'],
+        mono: ['"Inter"', 'monospace'], 
       },
-      
+            
       borderRadius: {
         xl: "calc(var(--radius) + 4px)",
         lg: "var(--radius)",
