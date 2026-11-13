@@ -210,8 +210,8 @@
 
 /* ── Hero ─────────────────────────────────────────────── */
 @keyframes heroTypewriter {
-  0% { clip-path: inset(0 100% 0 0); opacity: 1; }
-  100% { clip-path: inset(0 0 0 0); opacity: 1; }
+  0% { clip-path: inset(-10px 100% -10px -10px); opacity: 1; }
+  100% { clip-path: inset(-10px -10px -10px -10px); opacity: 1; }
 }
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(18px); }
@@ -222,11 +222,15 @@
   to   { opacity: 1; transform: translateX(0); }
 }
 
-.hero-word { display: block; overflow: hidden; }
+.hero-word { 
+  display: block; 
+  overflow: visible; 
+}
 .hero-word > span {
   display: block;
   opacity: 0; 
-  
+  padding-left: 6px;
+  margin-left: -6px;
   animation: heroTypewriter 0.6s steps(12, end) forwards;
 }
 /* Delaying the second word so it types after the first */
