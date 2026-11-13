@@ -16,9 +16,8 @@ const Hero = () => (
       <div className="flex flex-col order-2 lg:order-1 max-w-2xl">
         {/* Name */}
         <h1
-          className="text-[clamp(44px,7.5vw,96px)] font-semibold leading-[0.88] tracking-[-0.02em] text-foreground transition-colors duration-300 mb-6"
-          style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-        >
+  className="font-serif text-[clamp(44px,7.5vw,96px)] font-semibold leading-[0.88] tracking-[-0.02em] text-foreground transition-colors duration-300 mb-6"
+>
           <span className="hero-word"><span>Nicholas</span></span>
           <span className="hero-word"><span>Anakwue</span></span>
         </h1>
