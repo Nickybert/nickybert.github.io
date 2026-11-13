@@ -11,10 +11,9 @@ const Quote = () => (
           <span className="block text-[72px] lg:text-[88px] leading-[0.7] text-[#e0a35e] font-bold font-mono">
             &ldquo;
           </span>
-          <p className="text-[clamp(17px,1.9vw,22px)] font-normal leading-[1.6] text-[#F4F6F8]/90 mt-1"
-            style={{ fontFamily: "'Playfair Display', Georgia, serif", fontStyle: 'italic' }}>
-            Violent protests tend to accompany, complement, and extend organized, peaceful attempts by the same people to accomplish their objectives.
-          </p>
+          <p className="font-sans italic text-[clamp(17px,1.9vw,22px)] font-normal leading-[1.6] text-[#F4F6F8]/90 mt-1">
+  Violent protests tend to accompany, complement, and extend organized, peaceful attempts by the same people to accomplish their objectives.
+</p>
         </div>
 
         <div className="flex items-center gap-4 shrink-0">
