@@ -24,12 +24,12 @@ const Contact = () => (
 
         <h2 className="animate-on-scroll text-[clamp(32px,4vw,52px)] font-semibold text-[#F4F6F8] mb-6 leading-[1.1]">
           Let's collaborate<br />
-          <span className="italic text-[#F4F6F8]/55">together.</span>
+          <span className="italic text-[#F4F6F8]/55">on projects.</span>
         </h2>
 
         <div className="animate-on-scroll delay-1">
           <p className="text-base text-[#F4F6F8]/60 mb-6 leading-relaxed max-w-sm">
-            I am open to collaborations, speaking invitations, and questions about my ongoing PhD research.
+            I am open to work, speaking invitations, and questions about my ongoing PhD research.
           </p>
 
           {/* Email CTA */}
