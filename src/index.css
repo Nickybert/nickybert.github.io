@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -84,21 +84,23 @@
   html { scroll-behavior: smooth; }
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'DM Sans', system-ui, sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
     font-size: 16px;
     line-height: 1.65;
     /* smooth transitions to body and common elements */
     transition: background-color 0.3s var(--ease-out-expo), color 0.3s var(--ease-out-expo);
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', sans-serif;
-    font-weight: 700;
+   
+    font-family: 'Newsreader', serif;
+    font-weight: 500; /* Lowered this weight to 500 to match the reference aesthetic */
     text-transform: capitalize;
     letter-spacing: -0.01em;
     /* Transition for heading text color */
     transition: color 0.3s var(--ease-out-expo);
   }
-  .font-mono { font-family: 'IBM Plex Mono', monospace; }
+  
+  .font-mono { font-family: 'Inter', sans-serif; } 
   svg { fill: currentColor; } 
 }
 
@@ -135,9 +137,10 @@
   .section-dark  { background-color: var(--section-dark-bg); }
 
   .section-label {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.625rem;
-    letter-spacing: 0.14em;
+    /* Updated font to Inter */
+    font-family: 'Inter', sans-serif;
+    font-size: 0.6875rem; 
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--clr-red);
     display: flex;
@@ -145,7 +148,7 @@
     gap: 0.6rem;
     margin-bottom: 0.75rem;
   }
-  .section-label::after {
+    .section-label::after {
     content: '';
     display: block;
     width: 2rem;
@@ -236,12 +239,14 @@
 .hero-portrait    { animation: fadeInRight 1s cubic-bezier(0.16,1,0.3,1) 0.7s both; }
 
 /* ── Nav links ─────────────────────────────────────────── */
+/* ── Nav links ─────────────────────────────────────────── */
 .nav-link {
   position: relative;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.625rem;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
+  /* Updated font to Inter */
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: normal;
+  text-transform: capitalize; 
   /* variable for nav link color */
   color: var(--nav-link-color);
   transition: color 0.2s, background-color 0.3s ease; 
@@ -250,6 +255,7 @@
   cursor: pointer;
   padding: 0;
 }
+
 .nav-link::after {
   content: '';
   position: absolute;
@@ -345,3 +351,10 @@
 .img-zoom { overflow: hidden; }
 .img-zoom img { transition: transform 0.6s cubic-bezier(0.16,1,0.3,1); }
 .img-zoom:hover img { transform: scale(1.04); }
+
+.nav-logo {
+  font-family: 'Newsreader', serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-optical-sizing: auto; 
+}
