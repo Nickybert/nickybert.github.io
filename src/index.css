@@ -239,15 +239,12 @@
 .hero-portrait    { animation: fadeInRight 1s cubic-bezier(0.16,1,0.3,1) 0.7s both; }
 
 /* ── Nav links ─────────────────────────────────────────── */
-/* ── Nav links ─────────────────────────────────────────── */
 .nav-link {
   position: relative;
-  /* Updated font to Inter */
   font-family: 'Inter', sans-serif;
-  font-size: 0.95rem;
-  letter-spacing: normal;
-  text-transform: capitalize; 
-  /* variable for nav link color */
+  font-size: 0.7rem; /* Reduced to match the logo size */
+  letter-spacing: 0.13em; /* Added wide tracking */
+  text-transform: uppercase; /* Changed from capitalize to uppercase */
   color: var(--nav-link-color);
   transition: color 0.2s, background-color 0.3s ease; 
   background: none;
